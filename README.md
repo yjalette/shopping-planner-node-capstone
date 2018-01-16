@@ -14,7 +14,7 @@ to able to save links from diferent websites in one app from anywhere and be abl
 
 ## Initial UX
 User Stories
-AS A VISITOR, NOT LOGGED IN
+* AS A VISITOR, NOT LOGGED IN
 
 * As an initial visitor to the page, I want to land on the web page and see what the page is about so I can understand what the app is and does and decide whether or not to create an account to be able to use the app.
 * As a visitor, I want to create a new account so that I can use the app.
@@ -26,7 +26,7 @@ https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-im
 ![UI Flow handwritten draft](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/signup.png)
 * As a visitor who has already created an account, I want to log in so that I can access my account.
 ![UI Flow handwritten draft](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/signin.png)
-AS A LOGGED-IN USER
+* AS A LOGGED-IN USER
 * As a user, I want to set up my new account by orginizing all my links in one place by sectioning them so I can access them anytime I need them..
 * As a user, I want to view my saved links finds I have entered..
 

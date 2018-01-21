@@ -1,0 +1,236 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: darkred;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.account-dashboard-page header {
+    background-color: #fff;
+    padding: 25px;
+    color: #000;
+    display: block;
+}
+
+.account-dashboard-page header p,
+nav,
+ul,
+li {
+    display: inline;
+    background-color: #fff;
+    color: #000;
+}
+
+.account-dashboard-page header p {
+    text-shadow: 1px 1px #000;
+    font-size: 20px;
+}
+
+.account-dashboard-page header nav ul li {
+    float: right;
+}
+
+.account-dashboard-page section h4 {
+    font: 33px Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    margin: 70px;
+}
+
+
+.account-dashboard-page .table-base {
+    font: 13px Arial, Helvetica, sans-serif;
+    color: gray;
+    width: 100%;
+    margin: 15px;
+    padding: 30px;
+}
+
+.account-dashboard-page td,
+.account-dashboard-page th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.account-dashboard-page tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.account-dashboard-page button {
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    margin: 50px 100px;
+    padding: 20px;
+    float: right;
+}
+
+.account-dashboard-page .footer {
+    font: 13px Arial, Helvetica, sans-serif;
+    color: gray;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.account-dashboard-page .footer tr th {
+    text-align: center;
+    border: 0.5px solid lightgrey;
+    padding: 10px;
+}
+
+.account-dashboard-page .footer tr th a {
+    color: gray;
+}
+
+.account-dashboard-page .footer tr th:hover {
+    background-color: black;
+
+}
+
+/*view link*/
+
+.view-link-page h5 {
+    font: 33px Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    margin: 70px;
+}
+
+#link-options {
+    width: 50%;
+}
+
+#link-options tr th {
+    text-align: center;
+    font: 20px Arial,
+    Helvetica,
+    sans-serif;
+    background-color: #dddddd;
+    padding: 20px;
+}
+
+#link-options tr th a {
+    color: grey;
+}
+
+/*delete*/
+
+.delete {
+    font: 33px Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    display: block;
+    padding: 110px;
+    margin: 100px;
+}
+
+/*logout*/
+
+.logout {
+    font-size: 45px;
+    color: red;
+    text-align: center;
+    padding: 100px;
+    margin-top: 200px;
+}
+
+@media screen and (max-width: 1020px) {
+    .account-dashboard-page header {
+        padding: 10px;
+    }
+
+    .account-dashboard-page header p {
+        font-size: 15px;
+    }
+
+    .account-dashboard-page header ul li {
+        font-size: 15px;
+    }
+
+    .account-dashboard-page section h4 {
+        font-size: 43px;
+    }
+
+    .account-dashboard-page .table-base {
+        font-size: 17px;
+        color: gray;
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .account-dashboard-page .table-base tr th {
+        padding: 15px;
+    }
+
+    .account-dashboard-page button {
+        margin-right: 15px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #link-options {
+        width: 100%;
+        padding: 10px;
+        font-size: 17px;
+    }
+
+    .delete {
+        font-size: 24px;
+        padding: 10px;
+        margin: 150px 0px;
+    }
+
+    .logout {
+        font-size: 25px;
+        margin: 200px 0px;
+        padding: 10px;
+    }
+
+
+    .account-dashboard-page .footer {
+        font-size: 17px;
+        color: gray;
+        width: 100%;
+        padding: auto 10px;
+        margin-top: 300px;
+
+    }
+
+    .account-dashboard-page .footer tr th {
+        text-align: center;
+        border: 0.5px solid lightgrey;
+        padding: 15px;
+    }
+}

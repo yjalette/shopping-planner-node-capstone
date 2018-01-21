@@ -15,173 +15,327 @@
     -webkit-padding-end: 0px;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
 
-header {
-    background-color: #000;
+a:hover {
+    color: darkred;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid gray;
+    margin: 4px 0;
+    padding: 0;
+}
+
+.signup-page header {
+    background-color: #fff;
     padding: 25px;
-    color: #fff;
+    color: #000;
     display: block;
 }
 
-header p,
+.signup-page header p,
 nav,
 ul,
 li {
     display: inline;
-    background-color: #000;
+    background-color: #fff;
     color: #000;
 }
 
-header p {
-    text-shadow: 1px 1px #fff;
+.signup-page header p {
+    text-shadow: 1px 1px #000;
     font-size: 20px;
 }
 
-header nav ul li {
+.signup-page header nav ul li {
     float: right;
 }
 
-header ul li {
-    float: right;
-}
-
-h1 {
-    color: white;
-    padding: 150px;
-    text-align: center;
-}
-
-h1 .headline {
-    color: #BE3234;
-    font-size: 45px;
-
-}
-
-.form-style-10 {
-    width: 450px;
+.signup-page .form {
+    width: 50%;
+    display: block;
     padding: 30px;
-    margin: 40px auto;
-    background: #FFF;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    margin: 25px 350px;
 }
 
-.form-style-10 .inner-wrap {
-    padding: 30px;
-    background: #F8F8F8;
-    border-radius: 6px;
-    margin-bottom: 15px;
+.signup-page .form .wrap {
+    padding: 10px;
+    color: grey;
 }
 
-.form-style-10 h1 {
-    background: #BE3234;
-    padding: 20px 30px 15px 30px;
-    margin: -30px -30px 30px -30px;
-    border-radius: 10px 10px 0 0;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+.signup-page .form h1 {
+    color: red;
     font: normal 30px 'Bitter', serif;
-    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    border: 1px solid #257C9E;
+    text-align: center;
+    margin: 45px auto;
+    background-color: white;
 }
 
-.form-style-10 h1 > span {
+.signup-page .form h1 span {
     display: block;
     margin-top: 2px;
+    color: grey;
     font: 13px Arial, Helvetica, sans-serif;
 }
 
-.form-style-10 label {
+.signup-page .form label {
     display: block;
-    font: 13px Arial, Helvetica, sans-serif;
-    color: #888;
-    margin-bottom: 15px;
+    font: 15px Arial, Helvetica, sans-serif;
+    color: dimgrey;
+    margin: 15px auto;
 }
 
-.form-style-10 input[type="text"],
-.form-style-10 input[type="date"],
-.form-style-10 input[type="datetime"],
-.form-style-10 input[type="email"],
-.form-style-10 input[type="number"],
-.form-style-10 input[type="search"],
-.form-style-10 input[type="time"],
-.form-style-10 input[type="url"],
-.form-style-10 input[type="password"],
-.form-style-10 textarea,
-.form-style-10 select {
+
+.signup-page .form input {
     display: block;
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     width: 100%;
     padding: 8px;
     border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
     border: 2px solid #fff;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
-    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    background-color: lightgrey;
 }
 
-.form-style-10 .section {
-    font: normal 20px 'Bitter', serif;
-    color: #BE3234;
-    margin-bottom: 5px;
+.signup-page .button input {
+    background-color: darkgray;
+    color: black;
+    border: 1px solid black;
 }
 
-.form-style-10 .section span {
-    background: #BE3234;
-    padding: 5px 10px 5px 10px;
-    position: absolute;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border: 4px solid #fff;
-    font-size: 14px;
-    margin-left: -45px;
-    color: #fff;
-    margin-top: -3px;
-}
-
-.form-style-10 input[type="button"],
-.form-style-10 input[type="submit"] {
-    background: #BE3234;
-    padding: 8px 20px 8px 20px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-    font: normal 30px 'Bitter', serif;
-    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    border: 1px solid #257C9E;
-    font-size: 15px;
-}
-
-.form-style-10 input[type="button"]:hover,
-.form-style-10 input[type="submit"]:hover {
-    background: #2A6881;
-    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
-}
-
-.form-style-10 .privacy-policy {
+.signup-page #forgot-password a {
     float: right;
-    width: 250px;
-    font: 12px Arial, Helvetica, sans-serif;
-    color: #4D4D4D;
-    margin-top: 10px;
-    text-align: right;
+    padding: 15px;
+    font-size: 11px;
+    color: #BE3234;
+    text-decoration: underline;
+}
+
+/*create*/
+
+#create-form {
+    width: 40%;
+    display: block;
+    padding: 30px;
+    margin: 15px 420px;
+}
+
+#create-form wrap {
+    padding: 10px;
+    color: grey;
+}
+
+#create-form h1 {
+    color: red;
+    font: normal 30px 'Bitter', serif;
+    text-align: center;
+    margin: 45px auto;
+}
+
+#create-form h1 span {
+    display: block;
+    margin-top: 2px;
+    color: grey;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+
+#create-form label {
+    display: block;
+    font: 15px Arial, Helvetica, sans-serif;
+    color: dimgrey;
+    margin: 15px auto;
+}
+
+
+#create-form input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    background-color: lightgrey;
+}
+
+#create-form textarea {
+    border: 0.5px solid gray;
+}
+
+#create-form .button input {
+    background-color: darkgray;
+    color: black;
+    border: 1px solid black;
+}
+
+#account-form {
+    width: 50%;
+    margin-bottom: 90px;
+}
+
+#forgot-password a {
+    float: right;
+    padding: 15px;
+    font-size: 11px;
+    color: #BE3234;
+    text-decoration: underline;
+}
+
+.account-form-page .footer {
+    font: 13px Arial, Helvetica, sans-serif;
+    color: gray;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.account-form-page .footer tr th {
+    text-align: center;
+    border: 0.5px solid lightgrey;
+    padding: 10px;
+}
+
+.account-form-page .footer tr th a {
+    color: gray;
+}
+
+.account-form-page .footer tr th:hover {
+    background-color: black;
+
+}
+
+@media screen and (max-width: 1020px) {
+    .signup-page header {
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .signup-page header p {
+        font-size: 17px;
+    }
+
+    .signup-page header ul li {
+        font-size: 17px;
+    }
+
+    .signup-page .form {
+        width: 100%;
+        display: block;
+        padding: 40px;
+        margin: 15px 0px;
+    }
+
+    .signup-page .form h1 {
+        font-size: 80px;
+    }
+
+    .signup-page .form h1 span {
+        font-size: 33px;
+    }
+
+    .signup-page .form label {
+        font-size: 35px;
+        padding: 5px;
+    }
+
+    .signup-page .form input {
+        padding: 30px;
+        border-radius: 6px;
+        border: 2px solid #fff;
+        background-color: lightgrey;
+    }
+
+    .signup-page .button input {
+        font-size: 30px;
+        margin: 20px 0px;
+        background-color: dimgray;
+        color: white;
+    }
+
+    .signup-page #forgot-password a {
+        float: right;
+        padding: 15px;
+        font-size: 30px;
+    }
+
+
+    #create-form {
+        width: 100%;
+        margin: 0px;
+        display: block;
+        padding: 200px;
+    }
+
+    #create-form h1 {
+        color: red;
+        font-size: 70px;
+        text-align: center;
+    }
+
+
+    #create-form h1 span {
+        display: block;
+        margin-bottom: 15px;
+        color: grey;
+        font-size: 23px;
+    }
+
+    #create-form label {
+        display: block;
+        font-size: 35px;
+        margin: 25px auto;
+    }
+
+    #create-form input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 28px;
+        margin: 30px 0px;
+    }
+
+    #create-form .button input {
+        font-size: 40px;
+    }
+
+    #account-form {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+    #account-form h1 {
+        font-size: 25px;
+    }
+
+    #account-form label {
+        font-size: 17px;
+
+    }
+
+    #account-form input {
+        padding: 10px;
+        margin: 0px;
+    }
+
+
+    #account-form #button-account input {
+        background-color: red;
+        padding: 5px;
+        border-radius: 15px;
+
+    }
+
+    #account-form .footer {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    #account-form .footer tr th {
+        text-align: center;
+        border: 0.5px solid lightgrey;
+        padding: 10px;
+    }
 }

@@ -10,45 +10,272 @@
 </head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="client.js"></script>
     <header>
-        <p>Link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; background-color: white;"></i></p>
         <nav>
             <ul>
-                <li><a href="signin.html">Sign in</a></li>
-                <li><a href="signup.html">Sign Up&nbsp/&nbsp</a></li>
+                <li id="logo">
+                    <a href="index.html">
+                        <p>Link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; color: black;"></i></p>
+                    </a>
+                </li>
+                <li id="regis"><button id="button-learn">LOG IN / REGISTER</button></li>
             </ul>
         </nav>
     </header>
-    <main role="main">
-        <h1>
-            <p class="headline" id="typedtext">Link It &nbsp<i class="fa fa-mouse-pointer"></i></p>
+    <hr>
+
+
+
+
+
+
+
+    <main role="main" class="home-page">
+        <h1 id="tag-line">
+            <a href="index.html">
+                <p class="headline" id="typedtext">Link It &nbsp<i class="fa fa-mouse-pointer" style="border: 10px solid red "></i></p>
+            </a>
         </h1>
-        <h2>
-            <section><img src="img/t-shirt.png" alt="t-shirt"><br>Shopping</section>
-            <section><img src="img/work.png" alt="computer"><br>Work</section>
-            <section><img src="img/palette.png"><br>Hobby</section>
-        </h2>
-        <h3>
-            <section></section>
-            <section>
-                <ul>
-                    <li>No need to screenshot pages</li>
-                    <li>No need to send links to yourself</li>
-                    <li></li>
-                </ul>
-            </section>
-        </h3>
+        <section class="middle-home-page">
+            <div>Shopping<br><img src="img/t-shirt.png" alt="t-shirt"></div>
+            <div>Work<br><img src="img/work.png" alt="computer"></div>
+            <div>Hobby<br><img src="img/palette.png"></div>
+            <hr>
+            <h2 id="reasons">
+                <p id="why">With <b>Link It</b> all your links are organized and are accessible from any electronic devices.<br> Sign Up today!</p>
+            </h2>
+        </section>
     </main>
-    <footer>
-        <p>footer</p>
-    </footer>
+
+
+
+
+    <main role="main" class="signup-page">
+        <section class="form" id="signup-form">
+            <h1>New Customer<span>Start saving your time now!</span></h1>
+            <form>
+                <div class="wrap">
+                    <label>Your Full Name <input type="text" name="field1" required/></label>
+                    <label>Email Address <input type="email" name="field2" required/></label>
+                    <label>Phone Number <input type="text" name="field3" required/></label>
+                    <label>Password <input type="password" name="field4" required/></label>
+                    <label>Confirm Password <input type="password" name="field5" required/></label>
+                </div>
+                <div class="button" id="button-signup">
+                    <input type="submit" name="SignUp" />
+                </div>
+            </form>
+        </section>
+        <section class="form" id="signin-form">
+            <h1>Returning Customer<span>Please log in if you already have an account.</span></h1>
+            <form>
+                <div class="wrap">
+                    <label>Email Address <input type="email" name="field1" required /></label>
+                    <label>Password <input type="password" name="field2" required/></label>
+                </div>
+                <div class="button" id="button-signin">
+                    <input type="submit" name="Signin" />
+                </div>
+                <span id="forgot-password"><a href="password.html">Forgot your password?</a></span>
+            </form>
+        </section>
+    </main>
+
+
+    <main role="main" class="account-dashboard-page">
+        <section>
+            <h1>Saved Links</h1>
+            <table class="table-base">
+                <tr>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="create-button-div"><a href="create-a-link.html"><button class="create-button">Create a new link</button></a></div>
+        </section>
+        <hr>
+        <footer>
+            <ul>
+                <li><a href="">Saved links</a></li>
+                <li><a href="account.html">Account info</a></li>
+                <li><a href="logout.html">Log out</a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+
+
+
+
+    <main role="main" class="account-page">
+        <section id="account-form">
+            <h1>Account Information</h1>
+            <form>
+                <div class="wrap">
+                    <label>First Name* <input type="text" name="field1" required /></label>
+                    <label>Last Name*<input type="text" name="field2" required/></label>
+                    <label>Country<input type="text" name="field3" required/></label>
+                    <label>Email*<input type="email" name="field4" required/></label>
+                    <div class="button" id="button-account">
+                        <input type="submit" name="SignUp" />
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section>
+            <hr>
+            <footer>
+                <ul>
+                    <li><a href="">Saved links</a></li>
+                    <li><a href="account.html">Account info</a></li>
+                    <li><a href="logout.html">Log out</a></li>
+                </ul>
+            </footer>
+        </section>
+    </main>
+
+
+
+
+
+
+    <main role="main" class="create-a-link-page">
+        <section id="create-form">
+            <h1>Create a New Link
+            </h1>
+            <form>
+                <div class="wrap">
+                    <label>Category<input type="text" name="field2" /></label>
+                    <label>Name <input type="text" name="field2" /></label>
+                    <label>Link <input type="text" name="field2" /></label>
+                    <label>Message<br><textarea name="message" rows="3" cols="80">
+                        </textarea></label>
+                    <div class="button" id="button-create-form">
+                        <input type="submit" name="SignUp" />
+                    </div>
+                </div>
+            </form>
+        </section>
+        <hr>
+        <footer>
+            <ul>
+                <li><a href="">Saved links</a></li>
+                <li><a href="account.html">Account info</a></li>
+                <li><a href="logout.html">Log out</a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+
+
+    <main role="main" class="delete-a-link-page">
+        <section class="delete">
+            <span class="action-client">Link was successfully deleted!</span><br>
+        </section>
+        <hr>
+        <footer>
+            <ul>
+                <li><a href="">Saved links</a></li>
+                <li><a href="account.html">Account info</a></li>
+                <li><a href="logout.html">Log out</a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+
+
+    <main role="main" class="edit-a-link-page">
+        <section class="delete">
+            <span class="action-client">Link was successfully edited!</span><br>
+        </section>
+        <hr>
+        <footer>
+            <ul>
+                <li><a href="">Saved links</a></li>
+                <li><a href="account.html">Account info</a></li>
+                <li><a href="logout.html">Log out</a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+
+
+    <main role="main" class="logout-page">
+        <section class="logout">
+            <span class="action-client">Your were successfully log out!<br>We hope to see you soon!</span>
+        </section>
+    </main>
+
+
+    <main role="main" class="password-page">
+        <section id="create-form">
+            <h1>Create a New Password<br><span>Just enter your email address and we'll send you a link to create a new password</span></h1>
+            <form>
+                <div class="wrap">
+                    <label>Email <input type="text" name="field2" required/></label>
+                    <div class="button" id="button-signup">
+                        <input type="submit" name="signUp" />
+                    </div>
+                </div>
+            </form>
+        </section>
+        <hr>
+        <footer>
+            <ul>
+                <li><a href="">Saved links</a></li>
+                <li><a href="account.html">Account info</a></li>
+                <li><a href="logout.html">Log out</a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+
+
+
+
+    <main role="main" class="view-link-page">
+        <h1>Name</h1>
+        <div id="view-link"></div>
+        <section id="link-options">
+            <button class="view-link-button"><a href="delete-a-link.html">Delete this link</a></button>
+            <button class="view-link-button"><a href="create-a-link.html">Create a new link</a></button>
+        </section>
+        <hr>
+        <footer>
+            <ul>
+                <li><a href="">Saved links</a></li>
+                <li><a href="account.html">Account info</a></li>
+                <li><a href="logout.html">Log out</a></li>
+            </ul>
+        </footer>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="client.js"></script>
     <script>
+        $("#button-learn").click(function() {
+            $('html,body').animate({
+                    scrollTop: $(".signup-page").offset().top
+                },
+                'slow');
+        });
         // set up text to print, each item in array is new line
         var aText = new Array(
-            "An app that keeps all your links organized",
-            "Link it now"
+            "Save your time with ",
+            "Link It"
+
         );
         var iSpeed = 100; // time delay of print out
         var iIndex = 0; // start printing array at this posision
@@ -79,8 +306,6 @@
                 setTimeout("typewriter()", iSpeed);
             }
         }
-
-
         typewriter();
     </script>
 </body>

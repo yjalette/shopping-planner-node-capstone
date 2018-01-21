@@ -51,32 +51,31 @@
 
 
     <main role="main" class="signup-page">
-        <section class="form" id="signup-form">
+        <section class="form">
             <h1>New Customer<span>Start saving your time now!</span></h1>
-            <form>
+            <form id="signup-form">
                 <div class="wrap">
-                    <label>Your Full Name <input type="text" name="field1" required/></label>
-                    <label>Email Address <input type="email" name="field2" required/></label>
-                    <label>Phone Number <input type="text" name="field3" required/></label>
-                    <label>Password <input type="password" name="field4" required/></label>
-                    <label>Confirm Password <input type="password" name="field5" required/></label>
+                    <label>Your Full Name <input type="text" name="field1" required value="Kat"/></label>
+                    <label>Email Address <input type="email" name="field2" required value="yekaterina.jalette@gmail.com"/></label>
+                    <label>Phone Number <input type="text" name="field3" required value="3475737598"/></label>
+                    <label>Password <input type="password" name="field4" required value="123"/></label>
+                    <label>Confirm Password <input type="password" name="field5" required value="123"/></label>
                 </div>
                 <div class="button" id="button-signup">
                     <input type="submit" name="SignUp" />
                 </div>
             </form>
         </section>
-        <section class="form" id="signin-form">
+        <section class="form">
             <h1>Returning Customer<span>Please log in if you already have an account.</span></h1>
-            <form>
+            <form id="signin-form">
                 <div class="wrap">
-                    <label>Email Address <input type="email" name="field1" required /></label>
-                    <label>Password <input type="password" name="field2" required/></label>
+                    <label>Email Address <input type="email" name="field1" required value="yekaterina.jalette@gmail.com"/></label>
+                    <label>Password <input type="password" name="field2" required value="123"/></label>
                 </div>
                 <div class="button" id="button-signin">
                     <input type="submit" name="Signin" />
                 </div>
-                <span id="forgot-password"><a href="password.html">Forgot your password?</a></span>
             </form>
         </section>
     </main>
@@ -97,14 +96,14 @@
                     <td></td>
                 </tr>
             </table>
-            <div class="create-button-div"><a href="create-a-link.html"><button class="create-button">Create a new link</button></a></div>
+            <div class="create-button-div"><a href="#"><button class="create-button">Create a new link</button></a></div>
         </section>
         <hr>
         <footer>
             <ul>
-                <li><a href="">Saved links</a></li>
-                <li><a href="account.html">Account info</a></li>
-                <li><a href="logout.html">Log out</a></li>
+                <li><a href="#" class="footer-saved-links">Saved links</a></li>
+                <li><a href="#" class="footer-create">Create a link</a></li>
+                <li><a href="#" class="footer-logout">Log out</a></li>
             </ul>
         </footer>
     </main>
@@ -114,48 +113,16 @@
 
 
 
-    <main role="main" class="account-page">
-        <section id="account-form">
-            <h1>Account Information</h1>
-            <form>
-                <div class="wrap">
-                    <label>First Name* <input type="text" name="field1" required /></label>
-                    <label>Last Name*<input type="text" name="field2" required/></label>
-                    <label>Country<input type="text" name="field3" required/></label>
-                    <label>Email*<input type="email" name="field4" required/></label>
-                    <div class="button" id="button-account">
-                        <input type="submit" name="SignUp" />
-                    </div>
-                </div>
-            </form>
-        </section>
-        <section>
-            <hr>
-            <footer>
-                <ul>
-                    <li><a href="">Saved links</a></li>
-                    <li><a href="account.html">Account info</a></li>
-                    <li><a href="logout.html">Log out</a></li>
-                </ul>
-            </footer>
-        </section>
-    </main>
-
-
-
-
-
-
     <main role="main" class="create-a-link-page">
-        <section id="create-form">
+        <section>
             <h1>Create a New Link
             </h1>
-            <form>
+            <form id="create-form">
                 <div class="wrap">
-                    <label>Category<input type="text" name="field2" /></label>
-                    <label>Name <input type="text" name="field2" /></label>
-                    <label>Link <input type="text" name="field2" /></label>
-                    <label>Message<br><textarea name="message" rows="3" cols="80">
+                    <label>Category<input type="text" name="field2" value="Shopping"/></label>
+                    <label>Name <input type="text" name="field2" value="Dress"/></label>
+                    <label>Link <input type="text" name="field2" value="http://www.revolve.com/vatanika-lace-off-the-shoulder-dress-in-black/dp/VATR-WD17/?d=F&currency=USD&countrycode=US&mkwid={ifsearch:s}{ifcontent:c}_dc|pcrid|114237071531|pkw||pmt|&pdv=c&matchtype=&gclid=Cj0KCQiAkZHTBRCBARIsAMbXLhEQhAAffVok2i4Dnt1TB9HDDbUa4v5YTpEw08HPyGxj5HQsbFC3iNgaAqTPEALw_wcB"/></label>
+                    <label>Message<br><textarea name="message" rows="3" cols="80">test-test
                         </textarea></label>
                     <div class="button" id="button-create-form">
                         <input type="submit" name="SignUp" />
@@ -166,9 +133,9 @@
         <hr>
         <footer>
             <ul>
-                <li><a href="">Saved links</a></li>
-                <li><a href="account.html">Account info</a></li>
-                <li><a href="logout.html">Log out</a></li>
+                <li><a href="#" class="footer-saved-links">Saved links</a></li>
+                <li><a href="#" class="footer-create">Create a link</a></li>
+                <li><a href="#" class="footer-logout">Log out</a></li>
             </ul>
         </footer>
     </main>
@@ -183,30 +150,12 @@
         <hr>
         <footer>
             <ul>
-                <li><a href="">Saved links</a></li>
-                <li><a href="account.html">Account info</a></li>
-                <li><a href="logout.html">Log out</a></li>
+                <li><a href="#" class="footer-saved-links">Saved links</a></li>
+                <li><a href="#" class="footer-create">Create a link</a></li>
+                <li><a href="#" class="footer-logout">Log out</a></li>
             </ul>
         </footer>
     </main>
-
-
-
-
-    <main role="main" class="edit-a-link-page">
-        <section class="delete">
-            <span class="action-client">Link was successfully edited!</span><br>
-        </section>
-        <hr>
-        <footer>
-            <ul>
-                <li><a href="">Saved links</a></li>
-                <li><a href="account.html">Account info</a></li>
-                <li><a href="logout.html">Log out</a></li>
-            </ul>
-        </footer>
-    </main>
-
 
 
 
@@ -217,46 +166,21 @@
     </main>
 
 
-    <main role="main" class="password-page">
-        <section id="create-form">
-            <h1>Create a New Password<br><span>Just enter your email address and we'll send you a link to create a new password</span></h1>
-            <form>
-                <div class="wrap">
-                    <label>Email <input type="text" name="field2" required/></label>
-                    <div class="button" id="button-signup">
-                        <input type="submit" name="signUp" />
-                    </div>
-                </div>
-            </form>
-        </section>
-        <hr>
-        <footer>
-            <ul>
-                <li><a href="">Saved links</a></li>
-                <li><a href="account.html">Account info</a></li>
-                <li><a href="logout.html">Log out</a></li>
-            </ul>
-        </footer>
-    </main>
-
-
-
-
 
 
     <main role="main" class="view-link-page">
         <h1>Name</h1>
         <div id="view-link"></div>
         <section id="link-options">
-            <button class="view-link-button"><a href="delete-a-link.html">Delete this link</a></button>
-            <button class="view-link-button"><a href="create-a-link.html">Create a new link</a></button>
+            <button class="view-link-button" id="view-delete-button"><a href="#">Delete this link</a></button>
+            <button class="view-link-button" id="view-create-button"><a href="#">Create a new link</a></button>
         </section>
         <hr>
         <footer>
             <ul>
-                <li><a href="">Saved links</a></li>
-                <li><a href="account.html">Account info</a></li>
-                <li><a href="logout.html">Log out</a></li>
+                <li><a href="#" class="footer-saved-links">Saved links</a></li>
+                <li><a href="#" class="footer-create">Create a link</a></li>
+                <li><a href="#" class="footer-logout">Log out</a></li>
             </ul>
         </footer>
     </main>
@@ -273,7 +197,7 @@
         });
         // set up text to print, each item in array is new line
         var aText = new Array(
-            "Save your time with ",
+            "Save your time ",
             "Link It"
 
         );

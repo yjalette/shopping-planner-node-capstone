@@ -1,5 +1,5 @@
 const User = require('./models/user');
-const Achievement = require('./models/achievement');
+//const Achievement = require('./models/achievement');
 const bodyParser = require('body-parser');
 const config = require('./config');
 const mongoose = require('mongoose');
@@ -56,35 +56,43 @@ function closeServer() {
 // POST -----------------------------------
 // creating a new user
 app.post('/users/create', (req, res) => {
-    let username = req.body.username;
-    username = username.trim();
+    let name = req.body.name;
+    let email = req.body.email;
+    let phone = req.body.phone;
     let password = req.body.password;
+    // removes spaces
+    email = email.trim();
+    phone = phone.trim();
     password = password.trim();
+    //generate encryption key
     bcrypt.genSalt(10, (err, salt) => {
         if (err) {
             return res.status(500).json({
                 message: 'Internal server error'
             });
         }
-
+        //with the encryption key, encrypt a password
         bcrypt.hash(password, salt, (err, hash) => {
             if (err) {
                 return res.status(500).json({
                     message: 'Internal server error'
                 });
             }
-
+            // afrer passowrd is encrypted, create a new user in database
             User.create({
-                username,
+                name,
+                email,
+                phone,
                 password: hash,
             }, (err, item) => {
+                //if there is an error, show it
                 if (err) {
                     return res.status(500).json({
                         message: 'Internal Server Error'
                     });
                 }
+                //if there is no error, return the user
                 if (item) {
-                    console.log(`User \`${username}\` created.`);
                     return res.json(item);
                 }
             });

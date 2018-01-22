@@ -1,4 +1,8 @@
-//$('main').not('.home-page, .signup-page').toggle();
+//step 1 define functions, objects and variables
+let activeUserEmail = "";
+let activeUserId = "";
+//step 2 use functions, objects and variables(triggers)
+
 $(document).ready(function () {
     $(".home-page").show();
     $(".signup-page").show();
@@ -77,16 +81,48 @@ $("#signin-form").submit(function (event) {
     event.preventDefault();
     //get the value from the input box
     //    var userInput = $("#query").val();
-    $(".home-page").hide();
-    $(".signup-page").hide();
-    $(".account-dashboard-page").show();
-    $(".account-page").hide();
-    $(".create-form").hide();
-    $(".delete-a-link-page").hide();
-    $(".logout-page").hide();
-    $(".password-page").hide();
-    $(".view-link-page").hide();
-    $(".create-a-link-page").hide();
+    let signinEmail = $(".signin-email").val();
+    let signinPassword = $(".signin-password").val();
+    console.log(signinEmail, signinPassword);
+    if ((!signinEmail) || (signinEmail.length < 1) || (signinEmail.indexOf(' ') > 0)) {
+        alert('Invalid Email');
+    } else if ((!signinPassword) || (signinPassword.length < 1) || (signinPassword.indexOf(' ') > 0)) {
+        alert('Invalid Password');
+    } else {
+        const signinUserObject = {
+            email: signinEmail,
+            password: signinPassword
+        };
+        $.ajax({
+                type: "POST",
+                url: "/users/signin",
+                dataType: 'json',
+                data: JSON.stringify(signinUserObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                console.log(result);
+                activeUserEmail = result.email;
+                activeUserId = result._id;
+                $(".home-page").hide();
+                $(".signup-page").hide();
+                $(".account-dashboard-page").show();
+                $(".account-page").hide();
+                $(".create-form").hide();
+                $(".delete-a-link-page").hide();
+                $(".logout-page").hide();
+                $(".password-page").hide();
+                $(".view-link-page").hide();
+                $(".create-a-link-page").hide();
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+                alert('Invalid username and password combination. Pleae check your username and password and try again.');
+            });
+    };
+
 });
 
 $("#create-form").submit(function (event) {

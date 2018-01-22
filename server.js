@@ -101,12 +101,10 @@ app.post('/users/create', (req, res) => {
 });
 
 // signing in a user
-app.post('/signin', function (req, res) {
-    const user = req.body.username;
-    const pw = req.body.password;
+app.post('/users/signin', function (req, res) {
     User
         .findOne({
-            username: req.body.username
+            email: req.body.email
         }, function (err, items) {
             if (err) {
                 return res.status(500).json({
@@ -129,7 +127,7 @@ app.post('/signin', function (req, res) {
                         });
                     } else {
                         var logInTime = new Date();
-                        console.log("User logged in: " + req.body.username + ' at ' + logInTime);
+                        console.log("User logged in: " + req.body.email + ' at ' + logInTime);
                         return res.json(items);
                     }
                 });

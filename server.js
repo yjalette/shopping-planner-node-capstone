@@ -205,20 +205,6 @@ app.get('/link/:user', function (req, res) {
         });
 });
 
-// accessing a single achievement by id
-app.get('/achievement/:id', function (req, res) {
-    Achievement
-        .findById(req.params.id).exec().then(function (achievement) {
-            return res.json(achievement);
-        })
-        .catch(function (achievements) {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error'
-            });
-        });
-});
-
 // DELETE ----------------------------------------
 // deleting an achievement by id
 app.delete('/delete-link/:id', function (req, res) {

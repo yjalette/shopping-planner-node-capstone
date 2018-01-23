@@ -1,6 +1,61 @@
 //step 1 define functions, objects and variables
 let activeUserEmail = "";
 let activeUserId = "";
+
+function showLinks(activeUserEmail) {
+    $.ajax({
+            type: "GET",
+            url: '/link/' + activeUserEmail,
+            dataType: 'json',
+        })
+        .done(function (dataOutput) {
+            //displays the external api json object in the console
+            displayLinkResult(dataOutput.links, activeUserEmail);
+        })
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
+}
+
+function displayLinkResult(dataFromApi, activeUserEmail) {
+    console.log(dataFromApi, activeUserEmail);
+    var buildTheHtmlOutput = "";
+    buildTheHtmlOutput += '<tr>';
+    buildTheHtmlOutput += '<th>Category</th>';
+    buildTheHtmlOutput += '<th>Name</th>';
+    buildTheHtmlOutput += '<th>Link</th>';
+    buildTheHtmlOutput += '<th>Actions</th>';
+    buildTheHtmlOutput += '</tr>';
+    $.each(dataFromApi, function (dataKey, dataValue) {
+        buildTheHtmlOutput += '<tr>';
+        buildTheHtmlOutput += '<td>' + dataValue.category + '</td>';
+        buildTheHtmlOutput += '<td>' + dataValue.name + '</td>';
+        buildTheHtmlOutput += '<td><a href="' + dataValue.url + '" target="_blank">Click to view</a></td>';
+        buildTheHtmlOutput += '<td><a onclick=deleteLink("' + dataValue._id + '")> <i class="fa fa-trash" aria-hidden="true"></i></a></td>';
+        buildTheHtmlOutput += '</tr>';
+    })
+    $(".table-base").html(buildTheHtmlOutput);
+};
+
+function deleteLink(linkId) {
+    console.log(linkId);
+    $.ajax({
+            method: 'DELETE',
+            dataType: 'json',
+            contentType: 'application/json',
+            url: '/delete-link/' + linkId,
+        })
+        .done(function (result) {
+            showLinks(activeUserEmail);
+        })
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
+}
 //step 2 use functions, objects and variables(triggers)
 
 $(document).ready(function () {
@@ -55,6 +110,10 @@ $("#signup-form").submit(function (event) {
             })
             .done(function (result) {
                 console.log(result);
+                activeUserEmail = result.email;
+                activeUserId = result._id;
+                showLinks(activeUserEmail);
+                $(".create-link-email").val(activeUserEmail);
                 $(".home-page").hide();
                 $(".signup-page").hide();
                 $(".account-dashboard-page").hide();
@@ -104,6 +163,8 @@ $("#signin-form").submit(function (event) {
                 console.log(result);
                 activeUserEmail = result.email;
                 activeUserId = result._id;
+                showLinks(activeUserEmail);
+                $(".create-link-email").val(activeUserEmail);
                 $(".home-page").hide();
                 $(".signup-page").hide();
                 $(".account-dashboard-page").show();
@@ -129,17 +190,60 @@ $("#create-form").submit(function (event) {
     //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
     event.preventDefault();
     //get the value from the input box
-    //    var userInput = $("#query").val();
-    $(".home-page").hide();
-    $(".signup-page").hide();
-    $(".account-dashboard-page").show();
-    $(".account-page").hide();
-    $(".create-form").hide();
-    $(".delete-a-link-page").hide();
-    $(".logout-page").hide();
-    $(".password-page").hide();
-    $(".view-link-page").hide();
-    $(".create-a-link-page").hide();
+    let linkCategory = $(".create-link-category").val();
+    let linkName = $(".create-link-name").val();
+    let linkUrl = $(".create-link-link").val();
+    let linkMessage = $(".create-link-message").val();
+    let linkEmail = $(".create-link-email").val();
+    console.log(linkCategory, linkName, linkUrl, linkMessage, linkEmail);
+    if ((!linkCategory) || (linkCategory.length < 1)) {
+        alert('Invalid category');
+    } else if ((!linkName) || (linkName.length < 1) || (linkName.indexOf(' ') > 0)) {
+        alert('Invalid name');
+    } else if ((!linkUrl) || (linkUrl.length < 1) || (linkUrl.indexOf(' ') > 0)) {
+        alert('Invalid url');
+    } else if ((!linkMessage) || (linkMessage.length < 1)) {
+        alert('Invalid message');
+    } else if ((!linkEmail) || (linkEmail.length < 1) || (linkEmail.indexOf(' ') > 0)) {
+        alert('Invalid email');
+    } else {
+        const newLinkObject = {
+            category: linkCategory,
+            name: linkName,
+            url: linkUrl,
+            message: linkMessage,
+            email: linkEmail
+        };
+        $.ajax({
+                type: "POST",
+                url: "/link/create",
+                dataType: 'json',
+                data: JSON.stringify(newLinkObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                console.log(result);
+                showLinks(activeUserEmail);
+                $(".create-link-email").val(activeUserEmail);
+                $(".home-page").hide();
+                $(".signup-page").hide();
+                $(".account-dashboard-page").show();
+                $(".account-page").hide();
+                $(".create-form").hide();
+                $(".delete-a-link-page").hide();
+                $(".logout-page").hide();
+                $(".password-page").hide();
+                $(".view-link-page").hide();
+                $(".create-a-link-page").hide();
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+                alert('Invalid link information');
+            });
+    };
+
 });
 
 $(".create-button").on("click", function (event) {

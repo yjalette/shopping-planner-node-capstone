@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -33,7 +34,7 @@
     <main role="main" class="home-page">
         <h1 id="tag-line">
             <a href="index.html">
-                <p class="headline" id="typedtext">Link It &nbsp<i class="fa fa-mouse-pointer" style="border: 10px solid red "></i></p>
+                <p class="headline" id="typedtext">Link It</p>
             </a>
         </h1>
         <section class="middle-home-page">
@@ -119,11 +120,12 @@
             </h1>
             <form id="create-form">
                 <div class="wrap">
-                    <label>Category<input type="text" name="field2" value="Shopping"/></label>
-                    <label>Name <input type="text" name="field2" value="Dress"/></label>
-                    <label>Link <input type="text" name="field2" value="http://www.revolve.com/vatanika-lace-off-the-shoulder-dress-in-black/dp/VATR-WD17/?d=F&currency=USD&countrycode=US&mkwid={ifsearch:s}{ifcontent:c}_dc|pcrid|114237071531|pkw||pmt|&pdv=c&matchtype=&gclid=Cj0KCQiAkZHTBRCBARIsAMbXLhEQhAAffVok2i4Dnt1TB9HDDbUa4v5YTpEw08HPyGxj5HQsbFC3iNgaAqTPEALw_wcB"/></label>
-                    <label>Message<br><textarea name="message" rows="3" cols="80">test-test
+                    <label>Category<input type="text" name="field2" value="Shopping" class="create-link-category"/></label>
+                    <label>Name <input type="text" name="field2" value="Dress" class="create-link-name"/></label>
+                    <label>Link <input type="text" name="field2" value="http://www.revolve.com/vatanika-lace-off-the-shoulder-dress-in-black/dp/VATR-WD17/?d=F&currency=USD&countrycode=US&mkwid={ifsearch:s}{ifcontent:c}_dc|pcrid|114237071531|pkw||pmt|&pdv=c&matchtype=&gclid=Cj0KCQiAkZHTBRCBARIsAMbXLhEQhAAffVok2i4Dnt1TB9HDDbUa4v5YTpEw08HPyGxj5HQsbFC3iNgaAqTPEALw_wcB" class="create-link-link"/></label>
+                    <label>Message<br><textarea name="message" rows="3" cols="80" class="create-link-message">test-test
                         </textarea></label>
+                    <input type="text" name="field2" value="" class="create-link-email" />
                     <div class="button" id="button-create-form">
                         <input type="submit" name="SignUp" />
                     </div>

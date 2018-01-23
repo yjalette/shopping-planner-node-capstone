@@ -1,5 +1,5 @@
 const User = require('./models/user');
-//const Achievement = require('./models/achievement');
+const Link = require('./models/link');
 const bodyParser = require('body-parser');
 const config = require('./config');
 const mongoose = require('mongoose');
@@ -139,20 +139,19 @@ app.post('/users/signin', function (req, res) {
 // -------------ACHIEVEMENT ENDPOINTS------------------------------------------------
 // POST -----------------------------------------
 // creating a new achievement
-app.post('/new/create', (req, res) => {
-    let achieveWhat = req.body.achieveWhat;
-    achieveWhat = achieveWhat.trim();
-    let achieveHow = req.body.achieveHow;
-    let achieveWhy = req.body.achieveWhy;
-    let achieveWhen = req.body.achieveWhen;
-    let user = req.body.user;
+app.post('/link/create', (req, res) => {
+    let category = req.body.category;
+    let name = req.body.name;
+    let url = req.body.url;
+    let message = req.body.message;
+    let email = req.body.email;
 
-    Achievement.create({
-        user,
-        achieveWhat,
-        achieveHow,
-        achieveWhen,
-        achieveWhy
+    Link.create({
+        category,
+        name,
+        url,
+        message,
+        email
     }, (err, item) => {
         if (err) {
             return res.status(500).json({
@@ -160,25 +159,24 @@ app.post('/new/create', (req, res) => {
             });
         }
         if (item) {
-            console.log(`Achievement \`${achieveWhat}\` added.`);
             return res.json(item);
         }
     });
 });
 
 // PUT --------------------------------------
-app.put('/achievement/:id', function (req, res) {
+app.put('/link/:id', function (req, res) {
     let toUpdate = {};
-    let updateableFields = ['achieveWhat', 'achieveHow', 'achieveWhen', 'achieveWhy'];
+    let updateableFields = ['category', 'name', 'url', 'message', 'email'];
     updateableFields.forEach(function (field) {
         if (field in req.body) {
             toUpdate[field] = req.body[field];
         }
     });
-    Achievement
+    Link
         .findByIdAndUpdate(req.params.id, {
             $set: toUpdate
-        }).exec().then(function (achievement) {
+        }).exec().then(function (link) {
             return res.status(204).end();
         }).catch(function (err) {
             return res.status(500).json({
@@ -189,19 +187,14 @@ app.put('/achievement/:id', function (req, res) {
 
 // GET ------------------------------------
 // accessing all of a user's achievements
-app.get('/achievements/:user', function (req, res) {
-    Achievement
-        .find()
-        .sort('achieveWhen')
-        .then(function (achievements) {
-            let achievementOutput = [];
-            achievements.map(function (achievement) {
-                if (achievement.user == req.params.user) {
-                    achievementOutput.push(achievement);
-                }
-            });
+app.get('/link/:user', function (req, res) {
+    Link
+        .find({
+            "email": req.params.user
+        })
+        .then(function (links) {
             res.json({
-                achievementOutput
+                links
             });
         })
         .catch(function (err) {
@@ -228,8 +221,8 @@ app.get('/achievement/:id', function (req, res) {
 
 // DELETE ----------------------------------------
 // deleting an achievement by id
-app.delete('/achievement/:id', function (req, res) {
-    Achievement.findByIdAndRemove(req.params.id).exec().then(function (achievement) {
+app.delete('/delete-link/:id', function (req, res) {
+    Link.findByIdAndRemove(req.params.id).exec().then(function (link) {
         return res.status(204).end();
     }).catch(function (err) {
         return res.status(500).json({

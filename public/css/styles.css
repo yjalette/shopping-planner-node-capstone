@@ -89,6 +89,10 @@ footer ul li a {
     color: white;
     padding: 280px;
     text-align: center;
+    background-image: url(../img/keyboard.jpg);
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-position: center;
 }
 
 .home-page h1 .headline {
@@ -103,7 +107,7 @@ footer ul li a {
     border-top: 0.5px solid grey;
     margin: 0px;
     padding: 80px 20px;
-    background-color: dimgrey;
+    background-color: darkgrey;
 
 }
 
@@ -293,6 +297,13 @@ footer ul li a {
     #tag-line {
         padding: 200px 5px;
     }
+    .home-page h1 {
+        text-align: center;
+        background-attachment: fixed;
+        background-clip: border-box;
+        background-position: center;
+        background-position: 50% 50%
+    }
     #tag-line .headline {
         font-size: 100px;
     }
@@ -356,7 +367,7 @@ footer ul li a {
     }
 
     .signup-page .button input {
-        font-size: 20px;
+        font-size: 25px;
         margin: 10px 0px;
     }
 

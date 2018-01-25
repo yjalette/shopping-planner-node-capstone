@@ -135,10 +135,6 @@ app.post('/users/signin', function (req, res) {
         });
 });
 
-
-// -------------ACHIEVEMENT ENDPOINTS------------------------------------------------
-// POST -----------------------------------------
-// creating a new achievement
 app.post('/link/create', (req, res) => {
     let category = req.body.category;
     let name = req.body.name;

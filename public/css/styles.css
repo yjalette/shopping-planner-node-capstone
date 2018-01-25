@@ -62,7 +62,7 @@ header nav ul #regis {
 }
 
 h1 {
-    color: red;
+    color: #BE3234;
     font: 30px Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 45px auto;
@@ -75,9 +75,20 @@ h1 span {
     display: block;
 }
 
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    display: block;
+    float: none;
+    clear: both;
+}
+
 footer ul li {
     display: inline-block;
-    padding: 10px 210px;
+    width: 33%;
+    text-align: center;
 }
 
 footer ul li a {
@@ -98,7 +109,15 @@ footer ul li a {
 .home-page h1 .headline {
     color: #BE3234;
     font-size: 45px;
+}
 
+.home-page #link-it-button,
+.home-page #why-signup-button {
+    background-color: white;
+    color: #BE3234;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
 }
 
 .home-page .middle-home-page {
@@ -106,12 +125,12 @@ footer ul li a {
     border-bottom: 0.5px solid grey;
     border-top: 0.5px solid grey;
     margin: 0px;
-    padding: 80px 20px;
-    background-color: darkgrey;
+    padding: 100px 20px;
+    background-color: #BE3234;
 
 }
 
-.home-page div {
+.home-page .middle-home-page div {
     width: 32%;
     display: inline-block;
     text-align: center;
@@ -119,9 +138,9 @@ footer ul li a {
     font-size: 24px;
 }
 
-.home-page div img {
-    width: 30%;
-    padding: 10px;
+.home-page .middle-home-page div img {
+    width: 32%;
+    padding: 15px;
 }
 
 .delete-a-link-page .action-client,
@@ -133,15 +152,13 @@ footer ul li a {
 
 .home-page #reasons #why {
     color: white;
-    padding: 50px;
+    padding: 60px;
     margin-top: 80px;
+    text-align: center;
 }
 
-.signup-page header {
-    background-color: #fff;
+.signup-page {
     padding: 25px;
-    color: #000;
-    display: block;
 }
 
 .signup-page .form {
@@ -174,28 +191,26 @@ footer ul li a {
     background-color: lightgrey;
 }
 
-.signup-page #forgot-password a {
+.signup-page .button,
+#create-form #button-create-form,
+.create-button {
+    background-color: #BE3234;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 40px;
+    margin: 15px 10px;
+    text-align: center;
     float: right;
-    padding: 15px;
-    font-size: 11px;
-    color: #BE3234;
-    text-decoration: underline;
 }
 
 /*create*/
 
-#create-form,
-#account-form {
-    width: 40%;
+#create-form {
+    width: 50%;
     display: block;
     padding: 30px;
-    margin: 15px 420px;
-}
-
-#create-form .wrap,
-#account-form .wrap {
-    padding: 10px;
-    color: grey;
+    margin: 80px 2px;
+    float: left;
 }
 
 #create-form h1,
@@ -212,6 +227,7 @@ footer ul li a {
     font: 15px Arial, Helvetica, sans-serif;
     color: dimgrey;
     margin: 15px auto;
+    padding: 10px 30px;
 }
 
 
@@ -220,23 +236,16 @@ footer ul li a {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border-radius: 6px;
     border: 2px solid #fff;
     background-color: lightgrey;
 }
 
 #create-form textarea {
-    border: 0.5px solid gray;
-}
-
-
-#account-form #forgot-password a {
-    float: right;
-    padding: 15px;
-    font-size: 11px;
-    color: #BE3234;
-    text-decoration: underline;
+    border: 0.3px solid gray;
+    width: 100%;
+    height: 60px;
 }
 
 
@@ -261,193 +270,92 @@ footer ul li a {
     background-color: #dddddd;
 }
 
-.account-dashboard-page .create-button-div .create-button {
-    background-color: red;
-    color: #fff;
-    border-radius: 15px;
-    margin: auto 10px 40px 1300px;
-    padding: 10px;
-}
-
-
-/*view link page*/
-
-.view-link-page .view-link-button {
-    background-color: red;
-    border-radius: 15px;
-    margin: 30px;
-    padding: 20px;
-    display: inline;
-}
-
-.view-link-button a {
-    color: #fff;
-}
-
 
 @media only screen and (max-width:1000px) {
 
     nav {
-        padding: 30px;
-        font-size: 55px;
+        padding: 10px;
+        font-size: 25px;
     }
     nav #regis button {
-        font-size: 35px;
+        font-size: 15px;
     }
     #tag-line {
-        padding: 200px 5px;
+        padding: 250px 5px;
     }
     .home-page h1 {
         text-align: center;
         background-attachment: fixed;
         background-clip: border-box;
         background-position: center;
-        background-position: 50% 50%
+        background-position: 30% 30%
     }
     #tag-line .headline {
-        font-size: 100px;
+        font-size: 30px;
     }
     .home-page .middle-home-page {
         padding: 50px;
     }
     .home-page .middle-home-page div {
         text-align: center;
-        font-size: 30px;
-        padding: 55px;
+        font-size: 12px;
+        padding: 12px;
+        width: 30%;
 
     }
     .home-page .middle-home-page div img {
-        width: 130%;
-        display: block;
+        width: 160%;
     }
     .home-page #reasons {
-        padding: 100px;
+        padding: 10px;
     }
     .home-page #reasons #why {
-        color: white;
+        font-size: 20px;
         padding: 20px;
         margin: 2px;
     }
 
-    footer {
-        color: white;
-    }
-
-    footer ul {
-        background-color: white;
-    }
-
     footer ul li {
         display: inline-block;
-        padding: 20px 100px;
         margin: auto;
+        width: 30%;
     }
 
     footer ul li a {
         color: black;
         text-align: center;
-        font-size: 25px;
+        font-size: 15px;
+    }
+    .signup-page {
+        padding: 0px;
     }
 
-
-    .signup-page .form {
+    .signup-page .form,
+    .create-a-link-page #create-form {
         width: 100%;
         display: block;
-        padding: 50px;
-        margin: 15px 0px;
+        padding-top: 30px;
+        margin: 25px 0px;
     }
 
-    .signup-page .form label {
-        font-size: 25px;
+    .signup-page .form label,
+    .create-a-link-page #create-form label {
+        font-size: 12px;
         padding: 15px;
     }
 
-    .signup-page .form input {
-        padding: 30px;
+    .signup-page .form input,
+    .create-a-link-page #create-form input {
+        padding: 10px;
     }
 
-    .signup-page .button input {
-        font-size: 25px;
-        margin: 10px 0px;
-    }
-
-    .signup-page #forgot-password a {
+    .signup-page .button,
+    .create-button,
+    #button-create-form {
+        padding: 10px 15px;
+        margin: 5px 25px;
         float: right;
-        padding: 15px;
-        font-size: 23px;
     }
-
-
-    #create-form {
-        width: 100%;
-        margin: 0px;
-        display: block;
-        padding: 20px;
-    }
-
-
-    #create-form label {
-        display: block;
-        font-size: 25px;
-        margin: 10px auto;
-    }
-
-    #create-form input {
-        display: block;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 18px;
-        margin: 30px 0px;
-        font-size: 30px;
-    }
-    #create-form label textarea {
-        width: 100%;
-    }
-
-
-    #account-form {
-        width: 100%;
-        margin: 0px;
-        padding: 10px;
-    }
-
-    #account-form label {
-        font-size: 27px;
-
-    }
-
-    #account-form input {
-        padding: 20px;
-        margin: 0px;
-        font-size: 27px;
-    }
-
-    .account-dashboard-page .table-base {
-        color: gray;
-        width: 100%;
-        padding: 10px;
-        margin: 0px;
-    }
-
-    .account-dashboard-page .table-base tr th {
-        padding: 15px;
-        font-size: 27px;
-    }
-
-    .account-dashboard-page .create-button-div .create-button {
-        border-radius: 15px;
-        margin: 20px 120px;
-        padding: 10px 30px;
-        font-size: 20px;
-    }
-
-    .account-dashboard-page section h4,
-    .account-page section h1 {
-        font: 33px Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin: 70px;
-    }
-
 
     .account-dashboard-page .table-base {
         font: 13px Arial, Helvetica, sans-serif;
@@ -462,29 +370,13 @@ footer ul li a {
         border: 1px solid #dddddd;
         text-align: center;
         padding: 8px;
-        font-size: 35px;
+        font-size: 15px;
     }
 
     .account-dashboard-page tr:nth-child(even) {
         background-color: #dddddd;
     }
 
-    /*password*/
-    .password-page .wrap h1 span {
-        display: block;
-        padding: 10px;
-        color: grey;
-    }
-
-    /*view link page*/
-    .view-link-page .view-link-button {
-        background-color: red;
-        font-size: 25px;
-        border-radius: 15px;
-        margin: 25px;
-        padding: 25px;
-        display: inline;
-    }
 
     /*delete*/
     .delete {

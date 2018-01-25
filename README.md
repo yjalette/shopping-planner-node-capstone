@@ -81,3 +81,8 @@ Planned additional features and improvements will allow users to:
 * Refer back to these compliments (that help them to see that they are qualified and skilled) by viewing the "Bank."
 * Change password
 * Update email address
+
+## NPM command lines
+* npm install ==> install all node modules
+* nodemon server.js ==> run node server
+* npm test ==> run the tests

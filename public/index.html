@@ -19,7 +19,7 @@
                         <p>Link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; color: black;"></i></p>
                     </a>
                 </li>
-                <li id="regis"><button id="button-learn">LOG IN / REGISTER</button></li>
+                <li id="regis"><button class="button-learn">LOG IN / REGISTER</button></li>
             </ul>
         </nav>
     </header>
@@ -34,16 +34,18 @@
     <main role="main" class="home-page">
         <h1 id="tag-line">
             <a href="index.html">
-                <p class="headline" id="typedtext">Link It</p>
+                <p class="headline" id="typedtext"></p>
             </a>
+            <button id="link-it-button"><b>learn more</b></button>
         </h1>
         <section class="middle-home-page">
-            <div>Shopping<br><img src="img/t-shirt.png" alt="t-shirt"></div>
-            <div>Work<br><img src="img/work.png" alt="computer"></div>
-            <div>Hobby<br><img src="img/palette.png"></div>
+            <div><img src="img/t-shirt.png" alt="t-shirt"><br>Shopping</div>
+            <div><img src="img/palette.png"><br>Hobby</div>
+            <div><img src="img/work.png" alt="computer"><br>Work</div>
             <hr>
             <h2 id="reasons">
-                <p id="why">With <b>Link It</b> all your links are organized and are accessible from any electronic devices.<br> Sign Up today!</p>
+                <p id="why"> With Link it all your links are organized and are accessible from any devices.
+                    <br> Link It allows you to sync your bookmarks to all your devices<br> No more searching for that one link that you saved two weeks ago. <br><button class="button-learn" id="why-signup-button">Sign Up today!</button>
             </h2>
         </section>
     </main>
@@ -56,27 +58,23 @@
             <h1>New Customer<span>Start saving your time now!</span></h1>
             <form id="signup-form">
                 <div class="wrap">
-                    <label>Your Full Name <input type="text" name="field1" required value="Kat" class="signup-name"/></label>
-                    <label>Email Address <input type="email" name="field2" required value="yekaterina.jalette@gmail.com" class="signup-email"/></label>
-                    <label>Phone Number <input type="text" name="field3" required value="3475737598" class="signup-phone"/></label>
-                    <label>Password <input type="password" name="field4" required value="123" class="signup-password"/></label>
-                    <label>Confirm Password <input type="password" name="field5" required value="123" class="signup-confirm"/></label>
+                    <label>Your Full Name <input type="text" name="field1" required value="" class="signup-name"/></label>
+                    <label>Email Address <input type="email" name="field2" required value="" class="signup-email"/></label>
+                    <label>Phone Number <input type="text" name="field3" required value="" class="signup-phone"/></label>
+                    <label>Password <input type="password" name="field4" required value="" class="signup-password"/></label>
+                    <label>Confirm Password <input type="password" name="field5" required value="" class="signup-confirm"/></label>
                 </div>
-                <div class="button" id="button-signup">
-                    <input type="submit" name="SignUp" />
-                </div>
+                <button type="submit" name="Signin" class="button">Submit</button>
             </form>
         </section>
         <section class="form">
             <h1>Returning Customer<span>Please log in if you already have an account.</span></h1>
             <form id="signin-form">
                 <div class="wrap">
-                    <label>Email Address <input type="email" name="field1" required value="yekaterina.jalette@gmail.com" class="signin-email"/></label>
+                    <label>Email Address <input type="email" name="field1" required value="demo@demo.com" class="signin-email"/></label>
                     <label>Password <input type="password" name="field2" required value="123" class="signin-password"/></label>
                 </div>
-                <div class="button" id="button-signin">
-                    <input type="submit" name="Signin" />
-                </div>
+                <button type="submit" name="Signin" class="button">Submit</button>
             </form>
         </section>
     </main>
@@ -99,8 +97,8 @@
             </table>
             <div class="create-button-div"><a href="#"><button class="create-button">Create a new link</button></a></div>
         </section>
-        <hr>
         <footer>
+            <hr>
             <ul>
                 <li><a href="#" class="footer-saved-links">Saved links</a></li>
                 <li><a href="#" class="footer-create">Create a link</a></li>
@@ -123,17 +121,13 @@
                     <label>Category<input type="text" name="field2" value="Shopping" class="create-link-category"/></label>
                     <label>Name <input type="text" name="field2" value="Dress" class="create-link-name"/></label>
                     <label>Link <input type="text" name="field2" value="http://www.revolve.com/vatanika-lace-off-the-shoulder-dress-in-black/dp/VATR-WD17/?d=F&currency=USD&countrycode=US&mkwid={ifsearch:s}{ifcontent:c}_dc|pcrid|114237071531|pkw||pmt|&pdv=c&matchtype=&gclid=Cj0KCQiAkZHTBRCBARIsAMbXLhEQhAAffVok2i4Dnt1TB9HDDbUa4v5YTpEw08HPyGxj5HQsbFC3iNgaAqTPEALw_wcB" class="create-link-link"/></label>
-                    <label>Message<br><textarea name="message" rows="3" cols="80" class="create-link-message">test-test
-                        </textarea></label>
-                    <input type="text" name="field2" value="" class="create-link-email" />
-                    <div class="button" id="button-create-form">
-                        <input type="submit" name="SignUp" />
-                    </div>
+                    <input type="hidden" name="field2" value="" class="create-link-email" />
+                    <button type="submit" name="SignUp" class="button" id="button-create-form">Submit</button>
                 </div>
             </form>
         </section>
-        <hr>
         <footer>
+            <hr>
             <ul>
                 <li><a href="#" class="footer-saved-links">Saved links</a></li>
                 <li><a href="#" class="footer-create">Create a link</a></li>
@@ -149,8 +143,8 @@
         <section class="delete">
             <span class="action-client">Link was successfully deleted!</span><br>
         </section>
-        <hr>
         <footer>
+            <hr>
             <ul>
                 <li><a href="#" class="footer-saved-links">Saved links</a></li>
                 <li><a href="#" class="footer-create">Create a link</a></li>
@@ -177,8 +171,8 @@
             <button class="view-link-button" id="view-delete-button"><a href="#">Delete this link</a></button>
             <button class="view-link-button" id="view-create-button"><a href="#">Create a new link</a></button>
         </section>
-        <hr>
         <footer>
+            <hr>
             <ul>
                 <li><a href="#" class="footer-saved-links">Saved links</a></li>
                 <li><a href="#" class="footer-create">Create a link</a></li>
@@ -186,21 +180,31 @@
             </ul>
         </footer>
     </main>
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="client.js"></script>
     <script>
-        $("#button-learn").click(function() {
+        $(".button-learn").click(function() {
+            $(".signup-page").show();
+        });
+        $(".button-learn").click(function() {
             $('html,body').animate({
                     scrollTop: $(".signup-page").offset().top
                 },
                 'slow');
         });
+        $("#link-it-button").click(function() {
+            $(".middle-home-page").show();
+        });
+        $("#link-it-button").click(function() {
+            $('html,body').animate({
+                    scrollTop: $(".middle-home-page").offset().top
+                },
+                'slow');
+        });
+
         // set up text to print, each item in array is new line
         var aText = new Array(
-            "Save your time ",
-            "Link It"
+            "Save your time. Link It"
 
         );
         var iSpeed = 100; // time delay of print out

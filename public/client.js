@@ -32,7 +32,7 @@ function displayLinkResult(dataFromApi, activeUserEmail) {
         buildTheHtmlOutput += '<tr>';
         buildTheHtmlOutput += '<td>' + dataValue.category + '</td>';
         buildTheHtmlOutput += '<td>' + dataValue.name + '</td>';
-        buildTheHtmlOutput += '<td><a href="' + dataValue.url + '" target="_blank">Click to view</a></td>';
+        buildTheHtmlOutput += '<td><a href="' + dataValue.url + '" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a></td>';
         buildTheHtmlOutput += '<td><a onclick=deleteLink("' + dataValue._id + '")> <i class="fa fa-trash" aria-hidden="true"></i></a></td>';
         buildTheHtmlOutput += '</tr>';
     })
@@ -60,7 +60,8 @@ function deleteLink(linkId) {
 
 $(document).ready(function () {
     $(".home-page").show();
-    $(".signup-page").show();
+    $(".middle-home-page").hide();
+    $(".signup-page").hide();
     $(".account-dashboard-page").hide();
     $(".account-page").hide();
     $(".create-form").hide();
@@ -193,17 +194,14 @@ $("#create-form").submit(function (event) {
     let linkCategory = $(".create-link-category").val();
     let linkName = $(".create-link-name").val();
     let linkUrl = $(".create-link-link").val();
-    let linkMessage = $(".create-link-message").val();
     let linkEmail = $(".create-link-email").val();
-    console.log(linkCategory, linkName, linkUrl, linkMessage, linkEmail);
+    console.log(linkCategory, linkName, linkUrl, linkEmail);
     if ((!linkCategory) || (linkCategory.length < 1)) {
         alert('Invalid category');
     } else if ((!linkName) || (linkName.length < 1) || (linkName.indexOf(' ') > 0)) {
         alert('Invalid name');
     } else if ((!linkUrl) || (linkUrl.length < 1) || (linkUrl.indexOf(' ') > 0)) {
         alert('Invalid url');
-    } else if ((!linkMessage) || (linkMessage.length < 1)) {
-        alert('Invalid message');
     } else if ((!linkEmail) || (linkEmail.length < 1) || (linkEmail.indexOf(' ') > 0)) {
         alert('Invalid email');
     } else {
@@ -211,7 +209,6 @@ $("#create-form").submit(function (event) {
             category: linkCategory,
             name: linkName,
             url: linkUrl,
-            message: linkMessage,
             email: linkEmail
         };
         $.ajax({

@@ -3,14 +3,13 @@
 An app that keeps all your links organized. Link It Now.
 
 ## Screenshots
-![Landing page screen shot](https://github.com/Marjona6/not-just-luck-thinkful-full-stack-capstone/blob/master/public/img/njl01.png)
-![Account setup screen shot](https://github.com/Marjona6/not-just-luck-thinkful-full-stack-capstone/blob/master/public/img/njl02.png)
-![User homepage screen shot](https://github.com/Marjona6/not-just-luck-thinkful-full-stack-capstone/blob/master/public/img/njl03.png)
-![Achievement timeline screen shot](https://github.com/Marjona6/not-just-luck-thinkful-full-stack-capstone/blob/master/public/img/njl04.png)
-![Skills word cloud screen shot](https://github.com/Marjona6/not-just-luck-thinkful-full-stack-capstone/blob/master/public/img/njl05.png)
+![Landing page screen shot](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/home-page-screen-sh.png)
+![Sign up/sign in screen shot](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/home-page-screen-full-sh.png)
+![Create a link](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/create-a-link-screen-sh.png)
+![Saved links](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/saved-links-screen-sh.png)
 
 ## Use Case
-to able to save links from diferent websites in one app from anywhere and be able tp organize them so they will be easy found when needed
+With Link it all your links are organized and are accessible from any devices.
 
 ## Initial UX
 User Stories

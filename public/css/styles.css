@@ -62,7 +62,7 @@ header nav ul #regis {
 }
 
 h1 {
-    color: #BE3234;
+    color: #387780;
     font: 30px Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 45px auto;
@@ -107,14 +107,14 @@ footer ul li a {
 }
 
 .home-page h1 .headline {
-    color: #BE3234;
+    color: #387780;
     font-size: 45px;
 }
 
 .home-page #link-it-button,
 .home-page #why-signup-button {
     background-color: white;
-    color: #BE3234;
+    color: #387780;
     border-radius: 10px;
     padding: 10px;
     margin: 15px;
@@ -126,7 +126,7 @@ footer ul li a {
     border-top: 0.5px solid grey;
     margin: 0px;
     padding: 100px 20px;
-    background-color: #BE3234;
+    background-color: #387780;
 
 }
 
@@ -194,7 +194,7 @@ footer ul li a {
 .signup-page .button,
 #create-form #button-create-form,
 .create-button {
-    background-color: #BE3234;
+    background-color: #387780;
     color: white;
     border-radius: 10px;
     padding: 15px 40px;

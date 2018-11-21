@@ -16,7 +16,7 @@
             <ul>
                 <li id="logo">
                     <a href="index.html">
-                        <p>Link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; color: black;"></i></p>
+                        <p>link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; color: black;"></i></p>
                     </a>
                 </li>
                 <li id="regis"><button class="button-learn">LOG IN / REGISTER</button></li>
@@ -25,12 +25,31 @@
     </header>
     <hr>
 
+    <main role="main" class="home-page">
+        <div id="particles-js"></div>
+        <h1 id="tag-line">
+            <a href="index.html">
+                <p class="headline" id="typedtext"></p>
+            </a>
+            <button id="link-it-button"><b>learn more</b></button>
+        </h1>
+        <section class="middle-home-page">
+            <div><img src="img/t-shirt.png" alt="t-shirt"><br>Shopping</div>
+            <div><img src="img/palette.png"><br>Hobby</div>
+            <div><img src="img/work.png" alt="computer"><br>Work</div>
+            <hr>
+            <h2 id="reasons">
+                <p id="why"> With Link it all your links are organized and are accessible from any devices.
+                    <br> Link It allows you to sync your bookmarks to all your devices<br> No more searching for that one link that you saved two weeks ago. <br><button class="button-learn" id="why-signup-button">Sign Up today!</button>
+            </h2>
+        </section>
+    </main>
 
 
 
 
 
-
+<!--
     <main role="main" class="home-page">
         <h1 id="tag-line">
             <a href="index.html">
@@ -49,6 +68,7 @@
             </h2>
         </section>
     </main>
+-->
 
 
 
@@ -181,7 +201,13 @@
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="client.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+        });
+    </script>
     <script>
         $(".button-learn").click(function() {
             $(".signup-page").show();

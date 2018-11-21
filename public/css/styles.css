@@ -30,7 +30,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #387780;
     margin: 10px 0;
     padding: 0;
 }
@@ -46,7 +46,7 @@ header {
 header li {
     display: inline;
     background-color: #fff;
-    color: #000;
+    color: gray;
 }
 
 header nav ul #logo {
@@ -59,6 +59,10 @@ header nav ul #regis {
     display: inline;
     float: right;
     padding: 10px;
+}
+
+header nav ul #regis .button-learn {
+    background-color: transparent;
 }
 
 h1 {
@@ -96,6 +100,7 @@ footer ul li a {
 }
 
 
+/*
 .home-page h1 {
     color: white;
     padding: 280px;
@@ -111,14 +116,42 @@ footer ul li a {
     color: #387780;
     font-size: 45px;
 }
+*/
+
+.home-page #particles-js  {
+    height: 100vh;
+    background-color: #387780;
+    z-index: 1;
+}
+
+.home-page #tag-line {
+    background-color: white;
+    top: 50%;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+}
+
+.home-page h1 .headline {
+    font-family: fantasy;
+    color: black;
+    font-size: 45px;
+}
+
 
 .home-page #link-it-button,
 .home-page #why-signup-button {
-    background-color: white;
-    color: #387780;
+    background-color: orangered;
+    color: white;
     border-radius: 10px;
     padding: 10px;
     margin: 15px;
+    transition: 2s;
+}
+
+.home-page #link-it-button:hover,
+.home-page #why-signup-button:hover {
+    background-color:black;
 }
 
 .home-page .middle-home-page {
@@ -293,6 +326,9 @@ footer ul li a {
     }
     #tag-line .headline {
         font-size: 30px;
+    }
+    .home-page #tag-line {
+        top: 25%;
     }
     .home-page .middle-home-page {
         padding: 50px;

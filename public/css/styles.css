@@ -79,18 +79,28 @@ h1 span {
     display: block;
 }
 
+.wrapper{
+    height: 100vh;
+}
+
 footer {
     bottom: 0;
     width: 100%;
     height: 60px;
     margin-top: 20px;
-    display: block;
     float: none;
     clear: both;
 }
 
+footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
 footer ul li {
-    display: inline-block;
     width: 33%;
     text-align: center;
 }
@@ -99,27 +109,12 @@ footer ul li a {
     color: black;
 }
 
-
-/*
-.home-page h1 {
-    color: white;
-    padding: 280px;
-    text-align: center;
-    background-image: url(../img/keyboard.jpg);
-    background-attachment: fixed;
-    background-clip: border-box;
-    background-position: center;
+.home-page {
+    background-color: white;
+    height: 100vh;
 }
-
-.home-page h1 .headline {
-    font-family: fantasy;
-    color: #387780;
-    font-size: 45px;
-}
-*/
 
 .home-page #particles-js  {
-    height: 100vh;
     background-color: #387780;
     z-index: 1;
 }
@@ -138,7 +133,6 @@ footer ul li a {
     font-size: 45px;
 }
 
-
 .home-page #link-it-button,
 .home-page #why-signup-button {
     background-color: orangered;
@@ -155,26 +149,38 @@ footer ul li a {
 }
 
 .home-page .middle-home-page {
-    text-align: center;
-    border-bottom: 0.5px solid grey;
-    border-top: 0.5px solid grey;
-    margin: 0px;
-    padding: 100px 20px;
-    background-color: #387780;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 100px;
 }
 
-.home-page .middle-home-page div {
-    width: 32%;
-    display: inline-block;
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
+.home-page .middle-home-page #div-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: red;
+    font-size: 18px;
 }
 
-.home-page .middle-home-page div img {
+.home-page .middle-home-page>div {
+    padding: 50px;
+}
+
+.home-page .middle-home-page #div-img span {
+    text-align: center;
     width: 32%;
     padding: 15px;
+    margin: auto;
+    background-color: lightgray;
+}
+
+.home-page .middle-home-page #div-img span img {
+    width: 50%;
 }
 
 .delete-a-link-page .action-client,
@@ -184,10 +190,13 @@ footer ul li a {
     color: red;
 }
 
+.home-page #reasons {
+   width: 100%;
+}
+
 .home-page #reasons #why {
-    color: white;
-    padding: 60px;
-    margin-top: 80px;
+    color: gray;
+    margin: auto;
     text-align: center;
 }
 
@@ -237,13 +246,15 @@ footer ul li a {
     float: right;
 }
 
+
 /*create*/
+
 
 #create-form {
     width: 50%;
     display: block;
     padding: 30px;
-    margin: 80px 2px;
+    margin: auto;
     float: left;
 }
 
@@ -285,12 +296,19 @@ footer ul li a {
 
 /*account-dashboard-page*/
 
+
+
 .account-dashboard-page .table-base {
     font: 13px Arial, Helvetica, sans-serif;
-    color: gray;
     width: 100%;
-    margin: 15px;
+    margin: auto;
     padding: 30px;
+}
+
+
+.account-dashboard-page th {
+    background-color: #387780;
+    color: white;
 }
 
 .account-dashboard-page td,

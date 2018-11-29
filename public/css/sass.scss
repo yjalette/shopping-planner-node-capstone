@@ -1,0 +1,474 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+//colors
+$white: #E8F1F2;
+$blue: #387780;
+$gray: #7D8491;
+$purple: #7E6E93;
+$black: #272D2D;
+
+// fonts
+
+$font: Arial, Helvetica, sans-serif;
+
+//mixins
+
+@mixin breakpoint($class) {
+    @if $class == xxs {
+        @media (max-width: 480px) { @content; }
+    }
+
+    @else if $class == xs {
+        @media (max-width: 735px) { @content; }
+    }
+
+    @else if $class == sm {
+        @media (min-width: 736px) { @content; }
+    }
+
+    @else if $class == md {
+        @media (min-width: 980px) { @content; }
+    }
+
+    @else if $class == lg {
+        @media (min-width: 1280px) { @content; }
+    }
+
+    @else {
+        @warn "Breakpoint mixin supports: xxs, xs, sm, md, lg";
+    }
+}
+
+
+@mixin a {
+    text-decoration: none;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin h {
+    font: 30px $font;
+    color: $white;
+    padding: 30px;
+    @include breakpoint(xs){
+        padding: 15px;
+    }
+    @include breakpoint(xxs){
+        font-size: 25px;
+        padding: 5px;
+    }
+}
+
+@mixin button {
+    background-color: $purple;
+    color: $white;
+    width: 140px;
+    height: 40px;
+}
+
+@mixin ul {
+    list-style: none;
+}
+
+@mixin span {
+    color: $purple;
+    font: 16px $font;
+
+}
+
+@mixin p {
+    color: $gray;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    @include breakpoint(xs){
+        padding: 7px;
+        font-size: 16px;
+    }
+    @include breakpoint(xxs){
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+
+
+nav {
+    width: 100%;
+    background-color: $white;
+    padding: 10px;
+        ul {
+            @include flex;
+            justify-content: space-between;
+            flex-direction: row;
+            @include ul;
+                #logo {
+
+                    a {
+                        @include a;
+                        p{
+                        color: $blue;
+                        }
+                    }
+                }
+                #regis {
+                    border-bottom-left-radius: 50px;
+                    button {
+                       @include button;
+                    }
+                }
+
+        }
+ }
+
+
+.home-page {
+    @include flex;
+    #particles-js{
+        background-color: $blue;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+    }
+    #tag-line{
+        @include flex;
+        flex-direction: row;
+        z-index: 2;
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        @include breakpoint(xs){
+            flex-direction: column;
+        }
+        @include breakpoint(xxs){
+            flex-direction: column;
+        }
+        h1 {
+            @include h;
+            color: $purple;
+        }
+        button {
+            @include button;
+        }
+    }
+    .signup-page {
+        display: none;
+        z-index: 3;
+        position: absolute;
+        .wrap {
+            @include flex;
+            background-color: $purple;
+            flex-direction: column;
+            padding: 2px;
+            border: 2px solid $purple;
+            #close {
+                font-size: 17px;
+                color: $white;
+                width: 95%;
+            }
+            #reg-tabs {
+                @include flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: $white;
+                text-align: center;
+                span {
+                    width: 50%;
+                    padding: 10px;
+                    cursor: pointer;
+                    border: 2px solid $purple;
+                    @include span;
+
+                }
+                .active {
+                    background-color: $purple;
+                    color: $white;
+
+                }
+            }
+            form {
+                background-color: $white;
+                border: 2px solid $purple;
+                padding: 50px;
+                @include flex;
+                flex-direction: column;
+                @include breakpoint(xs){
+                    padding: 10px;
+                }
+                @include breakpoint(xxs){
+                    padding: 5px;
+                }
+
+                label {
+                    @include p;
+                    color: $gray;
+                    @include flex;
+                    flex-direction: column;
+                    input {
+                        width: 400px;
+                        height: 30px;
+                        @include breakpoint(xxs){
+                            width: 250px;
+                        }
+                    }
+                }
+                button {
+                    @include button;
+                }
+            }
+            #signup-form {
+                display: none;
+            }
+        }
+    }
+}
+
+.middle-home-page {
+    @include flex;
+    flex-direction: column;
+    background-color: $white;
+    height: 100vh;
+
+    h2 {
+        @include h;
+        background-color: $purple;
+        width: 50%;
+        align-self: start;
+        border-top-right-radius: 50px;
+    }
+    #div-img {
+        @include flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        span {
+            @include span;
+            @include flex;
+            background-color: $blue;
+            color: $white;
+            width: 100%;
+            height: 100%;
+            @include breakpoint(xxs){
+                flex-direction: column;
+            }
+            img {
+                width: 30%;
+                @include breakpoint(sm){
+                    width: 35%;
+                }
+                @include breakpoint(xs){
+                    width: 40%;
+                }
+                @include breakpoint(xxs){
+                    width: 45%;
+                }
+
+            }
+        }
+    }
+    #reasons {
+        p {
+           @include p;
+
+        }
+    }
+
+    button {
+        @include button;
+        padding-bottom: 10px;
+    }
+
+}
+
+
+
+.account-dashboard-page {
+    background-color: $blue;
+    width: 100%;
+    height: auto;
+    h1{
+        @include h;
+        width: 50%;
+        background-color: $purple;
+        align-self: start;
+        border-top-right-radius: 50px;
+    }
+    .wrapper {
+         @include flex;
+         flex-direction: column;
+         padding: 50px;
+        height: 100vh;
+        @include breakpoint(xs){
+            padding: 15px;
+        }
+        @include breakpoint(xxs){
+            padding: 5px;
+        }
+
+        table {
+            background-color: $white;
+            border: 1px solid $gray;
+            width: 80%;
+            padding: 50px;
+            @include breakpoint(xs){
+                width: 90%;
+                padding: 30px;
+            }
+            @include breakpoint(xxs){
+                width: 95%;
+                padding: 15px;
+            }
+            tr {
+                th {
+                    color: $blue;
+                    border: 1px solid $black;
+                    text-align: center;
+                    padding: 15px;
+                }
+            }
+            tr {
+                td {
+                    color: $black;
+                    border: 1px solid $black;
+                    text-align: center;
+                    padding: 15px;
+                }
+            }
+            tr:nth-child(even){
+                background-color: $purple;
+
+            }
+        }
+        .create-button-div {
+            padding: 50px;
+            a {
+                @include a;
+                button {
+                    @include button;
+
+                }
+            }
+        }
+    }
+
+}
+
+.create-a-link-page {
+    @include flex;
+    flex-direction: column;
+    background-color: $blue;
+    h1 {
+        @include h;
+        align-self: start;
+        background-color: $purple;
+        width: 50%;
+        border-top-right-radius: 50px;
+    }
+    .wrapper {
+        @include flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        padding: 50px;
+            form {
+            background-color: $white;
+            border: 2px solid $purple;
+            padding: 30px;
+            @include flex;
+            flex-direction: column;
+                @include breakpoint(xs){
+                    padding: 5px;
+                }
+                @include breakpoint(xxs){
+                    padding: 15px;
+                }
+
+            label {
+                @include p;
+                color: $gray;
+                @include flex;
+                flex-direction: column;
+
+                input {
+                    padding: 10px;
+                    width: 400px;
+                    height: 40px;
+                    @include breakpoint(xxs){
+                        width: 300px;
+                    }
+                }
+            }
+            button {
+                @include button;
+            }
+        }
+    }
+}
+
+.view-link-page {
+    @include flex;
+    flex-direction: column;
+    background-color: $white;
+    h1 {
+        @include h;
+        align-self: start;
+        background-color: $purple;
+        width: 50%;
+    }
+    #view-link {
+        background-color: $blue;
+        width: 50%;
+    }
+        #link-options {
+
+            button {
+                @include button;
+            }
+        }
+}
+
+
+footer {
+    margin: auto auto 0 auto;
+    position: relative;
+    width: 100%;
+    background-color: $black;
+        ul{
+            @include ul;
+            @include flex;
+            flex-direction: row;
+            justify-content: space-between;
+            li {
+                padding: 10px;
+                a{
+                    @include a;
+                    color: $white;
+                    i {
+                        color: $white;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+}

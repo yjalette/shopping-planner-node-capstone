@@ -1,16 +1,41 @@
+// tabs registration
+
+$("#reg-tab").on("click", function(){
+    $("#reg-tab").removeClass("active");
+    $("#log-tab").addClass("active");
+    $("#signup-form").css("display", "flex");
+    $("#signin-form").hide();
+
+})
+
+$("#log-tab").on("click", function(){
+    $("#log-tab").removeClass("active");
+    $("#reg-tab").addClass("active");
+    $("#signin-form").css("display", "flex");
+    $("#signup-form").hide();
+})
+
+
+
+/// show about on click
+
 $(".button-learn").click(function() {
-    $(".signup-page").show();
+    $(".signup-page").css("display", "flex");
+    $("#tag-line").hide();
     $(".middle-home-page").hide();
+
 });
-$(".button-learn").click(function() {
-    $('html,body').animate({
-            scrollTop: $(".signup-page").offset().top
-},'slow');
+
+$("#close").click(function() {
+    $(".signup-page").css("display", "none");
+    $("#tag-line").show();
 });
+
 
 $("#link-it-button").click(function() {
     $(".middle-home-page").show();
-    $(".signup-page").hide();
+    $(".home-page").hide();
+    $("nav").hide();
 });
 $("#link-it-button").click(function() {
     $('html,body').animate({

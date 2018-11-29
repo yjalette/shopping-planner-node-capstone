@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -12,88 +13,105 @@
 </head>
 
 <body>
-    <header>
+
         <nav>
             <ul>
                 <li id="logo">
                     <a href="index.html">
-                        <p data-aos="fade-in-up"
-                           data-aos-duration="1000"
-                           data-aos-easing="ease-in-out">link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; color: black;"></i></p>
+                        <p>link It &nbsp<i class="fa fa-mouse-pointer" style="font-size:24px; color: black;"></i></p>
                     </a>
                 </li>
                 <li id="regis"><button class="button-learn">LOG IN / REGISTER</button></li>
             </ul>
         </nav>
-    </header>
+
     <hr>
 
     <main role="main" class="home-page">
         <div id="particles-js"></div>
-        <h1 id="tag-line">
-            <a href="index.html">
-                <p class="headline" id="typedtext"></p>
-            </a>
-            <button id="link-it-button"><b>learn more</b></button>
-        </h1>
-        <section class="middle-home-page">
+        <div id="tag-line">
+                <h1 class="headline" id="typedtext"></h1>
+            <button id="link-it-button">learn more</button>
+        </div>
+        <section class="signup-page">
+            <div class="wrap">
+                <i class="fa fa-close" id="close"></i>
+                <div id="reg-tabs">
+                    <span id="log-tab" class="active">login</span>
+                    <span id="reg-tab">register</span>
+                </div>
+                <form id="signup-form">
+                    <label>your full name <input type="text" name="field1" required value="" class="signup-name"/></label>
+                    <label>email address <input type="email" name="field2" required value="" class="signup-email"/></label>
+                    <label>phone number <input type="text" name="field3" required value="" class="signup-phone"/></label>
+                    <label>password <input type="password" name="field4" required value="" class="signup-password"/></label>
+                    <label>confirm password <input type="password" name="field5" required value="" class="signup-confirm"/></label>
 
-           <div id="div-img">
-
-                <span>work<img src="img/work.png" alt="computer"></span>
-                <span>shopping<img src="img/t-shirt.png" alt="t-shirt"></span>
-                <span>hobby<img src="img/palette.png"></span>
-
+                    <button type="submit" name="Signin" class="button">register</button>
+                </form>
+                <form id="signin-form">
+                    <label>email address <input type="email" name="field1" required value="demo@demo.com" class="signin-email"/></label>
+                    <label>password <input type="password" name="field2" required value="123" class="signin-password"/></label>
+                    <button type="submit" name="Signin" class="button">login</button>
+                </form>
             </div>
-
-            <div id="reasons">
-                <p id="why"> With Link it all your links are organized and are accessible from any devices. Link It allows you to sync your bookmarks to all your devices. No more searching for that one link that you saved two weeks ago.
-                </p>
-            </div>
-
-            <button class="button-learn" id="why-signup-button">Sign Up today!
-            </button>
-
         </section>
     </main>
 
 
-    <main role="main" class="signup-page">
-        <section class="form">
-            <h1>New Customer<span>Start saving your time now!</span></h1>
-            <form id="signup-form">
-                <div class="wrap">
-                    <label>Your Full Name <input type="text" name="field1" required value="" class="signup-name"/></label>
-                    <label>Email Address <input type="email" name="field2" required value="" class="signup-email"/></label>
-                    <label>Phone Number <input type="text" name="field3" required value="" class="signup-phone"/></label>
-                    <label>Password <input type="password" name="field4" required value="" class="signup-password"/></label>
-                    <label>Confirm Password <input type="password" name="field5" required value="" class="signup-confirm"/></label>
-                </div>
-                <button type="submit" name="Signin" class="button">Submit</button>
-            </form>
-        </section>
-        <section class="form">
-            <h1>Returning Customer<span>Please log in if you already have an account.</span></h1>
-            <form id="signin-form">
-                <div class="wrap">
-                    <label>Email Address <input type="email" name="field1" required value="demo@demo.com" class="signin-email"/></label>
-                    <label>Password <input type="password" name="field2" required value="123" class="signin-password"/></label>
-                </div>
-                <button type="submit" name="Signin" class="button">Submit</button>
-            </form>
-        </section>
+
+
+    <main role="main" class="middle-home-page">
+        <h2>About Link</h2>
+        <div id="div-img">
+            <span>work<br><img src="img/work.png" alt="computer"></span>
+            <span>shopping<br><img src="img/t-shirt.png" alt="t-shirt"></span>
+            <span>hobby<br><img src="img/palette.png" alt="palette"></span>
+        </div>
+        <div id="reasons">
+            <p id="why"> With Link it all your links are organized and are accessible from any devices. Link It allows you to sync your bookmarks to all your devices. No more searching for that one link that you saved two weeks ago.
+            </p>
+        </div>
+<!--
+        <button class="button-learn" id="why-signup-button">Sign Up today!
+        </button>
+-->
+        <footer>
+            <hr>
+            <ul>
+                <li><a href="#" class="footer-logout"><i class="fa fa-home"></i></a></li>
+                <li><a href="#" id="c-right"><i class="fa fa-copyright">Link It</i></a></li>
+            </ul>
+        </footer>
     </main>
+
 
 
     <main role="main" class="account-dashboard-page">
+        <h1>SAVED LINKS</h1>
         <section class="wrapper">
-            <h1>SAVED LINKS</h1>
             <table class="table-base">
                 <tr>
                     <th>category</th>
                     <th>name</th>
                     <th>link</th>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
                 <tr>
                     <td></td>
                     <td></td>
@@ -115,17 +133,14 @@
 
 
     <main role="main" class="create-a-link-page">
+        <h1>Create a link</h1>
         <section class="wrapper">
-            <h1>CREATE A NEW LINK
-            </h1>
             <form id="create-form">
-                <div class="wrap">
                     <label>category<input type="text" name="field2" value="Shopping" class="create-link-category"/></label>
                     <label>name <input type="text" name="field2" value="Dress" class="create-link-name"/></label>
                     <label>link <input type="text" name="field2" value="http://www.revolve.com/vatanika-lace-off-the-shoulder-dress-in-black/dp/VATR-WD17/?d=F&currency=USD&countrycode=US&mkwid={ifsearch:s}{ifcontent:c}_dc|pcrid|114237071531|pkw||pmt|&pdv=c&matchtype=&gclid=Cj0KCQiAkZHTBRCBARIsAMbXLhEQhAAffVok2i4Dnt1TB9HDDbUa4v5YTpEw08HPyGxj5HQsbFC3iNgaAqTPEALw_wcB" class="create-link-link"/></label>
                     <input type="hidden" name="field2" value="" class="create-link-email" />
-                    <button type="submit" name="SignUp" class="button" id="button-create-form">submit</button>
-                </div>
+                    <button type="submit" name="SignUp" class="button" id="button-create-form">create</button>
             </form>
         </section>
         <footer>
@@ -165,15 +180,14 @@
 
 
 
+<!--
     <main role="main" class="view-link-page">
-       <section id="wrapper">
-            <h1>Name</h1>
+        <h1>View your link</h1>
             <div id="view-link"></div>
             <section id="link-options">
-                <button class="view-link-button" id="view-delete-button"><a href="#">Delete this link</a></button>
-                <button class="view-link-button" id="view-create-button"><a href="#">Create a new link</a></button>
+                <button class="view-link-button" id="view-delete-button">Delete this link</button>
+                <button class="view-link-button" id="view-create-button">Create a new link</button>
             </section>
-        </section>
         <footer>
             <hr>
             <ul>
@@ -183,6 +197,7 @@
             </ul>
         </footer>
     </main>
+-->
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

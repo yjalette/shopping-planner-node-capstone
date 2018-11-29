@@ -1,4 +1,8 @@
 //step 1 define functions, objects and variables
+
+
+///
+
 let activeUserEmail = "";
 let activeUserId = "";
 
@@ -61,15 +65,14 @@ function deleteLink(linkId) {
 $(document).ready(function () {
     $(".home-page").show();
     $(".middle-home-page").hide();
-    $(".signup-page").hide();
+//    $(".signup-page").hide();
     $(".account-dashboard-page").hide();
+    $(".create-a-link-page").hide();
     $(".account-page").hide();
     $(".create-form").hide();
     $(".delete-a-link-page").hide();
     $(".logout-page").hide();
-    $(".password-page").hide();
-    $(".view-link-page").hide();
-    $(".create-a-link-page").hide();
+
 
 })
 

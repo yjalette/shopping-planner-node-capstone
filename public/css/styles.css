@@ -1,454 +1,426 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    /*reset Chrome user agent styles*/
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-before: 0px;
-    -webkit-padding-after: 0px;
-    -webkit-padding-start: 0px;
-    -webkit-padding-end: 0px;
-}
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /*reset Chrome user agent styles*/
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0px;
+  -webkit-padding-after: 0px;
+  -webkit-padding-start: 0px;
+  -webkit-padding-end: 0px; }
 
-
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    color: darkred;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #387780;
-    margin: 10px 0;
-    padding: 0;
-}
-
-
-header {
-    background-color: #fff;
-    padding: 15px;
-    color: #000;
-    display: block;
-}
-
-header li {
-    display: inline;
-    background-color: #fff;
-    color: gray;
-}
-
-header nav ul #logo {
-    display: inline;
-    float: left;
-    padding: 10px;
-}
-
-header nav ul #regis {
-    display: inline;
-    float: right;
-    padding: 10px;
-}
-
-header nav ul #regis .button-learn {
-    background-color: transparent;
-}
-
-h1 {
-    color: #387780;
-    font: 30px Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 45px auto;
-    background-color: white;
-}
-
-h1 span {
-    font-size: 12px;
-    color: gray;
-    display: block;
-}
-
-.wrapper{
-    height: 100vh;
-}
-
-footer {
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    margin-top: 20px;
-    float: none;
-    clear: both;
-}
-
-footer ul {
+nav {
+  width: 100%;
+  background-color: #E8F1F2;
+  padding: 10px; }
+  nav ul {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    list-style: none;
-}
-
-footer ul li {
-    width: 33%;
-    text-align: center;
-}
-
-footer ul li a {
-    color: black;
-}
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none; }
+    nav ul #logo a {
+      text-decoration: none; }
+      nav ul #logo a p {
+        color: #387780; }
+    nav ul #regis {
+      border-bottom-left-radius: 50px; }
+      nav ul #regis button {
+        background-color: #7E6E93;
+        color: #E8F1F2;
+        width: 140px;
+        height: 40px; }
 
 .home-page {
-    background-color: white;
-    height: 100vh;
-}
-
-.home-page #particles-js  {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .home-page #particles-js {
     background-color: #387780;
     z-index: 1;
-}
-
-.home-page #tag-line {
-    background-color: white;
-    top: 50%;
+    width: 100%;
+    height: 100vh; }
+  .home-page #tag-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     z-index: 2;
     position: absolute;
-    width: 100%;
-}
-
-.home-page h1 .headline {
-    font-family: fantasy;
-    color: black;
-    font-size: 45px;
-}
-
-.home-page #link-it-button,
-.home-page #why-signup-button {
-    background-color: orangered;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 15px;
-    transition: 2s;
-}
-
-.home-page #link-it-button:hover,
-.home-page #why-signup-button:hover {
-    background-color:black;
-}
-
-.home-page .middle-home-page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 100px;
-}
-
-.home-page .middle-home-page #div-img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    color: red;
-    font-size: 18px;
-}
-
-.home-page .middle-home-page>div {
-    padding: 50px;
-}
-
-.home-page .middle-home-page #div-img span {
-    text-align: center;
-    width: 32%;
-    padding: 15px;
-    margin: auto;
-    background-color: lightgray;
-}
-
-.home-page .middle-home-page #div-img span img {
-    width: 50%;
-}
-
-.delete-a-link-page .action-client,
-.edit-a-link-page .action-client,
-.logout-page .action-client {
-    text-align: center;
-    color: red;
-}
-
-.home-page #reasons {
-   width: 100%;
-}
-
-.home-page #reasons #why {
-    color: gray;
-    margin: auto;
-    text-align: center;
-}
-
-.signup-page {
-    padding: 25px;
-}
-
-.signup-page .form {
-    width: 50%;
-    display: block;
-    padding: 30px;
-    margin: 25px 350px;
-}
-
-.signup-page .form .wrap {
-    padding: 10px;
-    color: grey;
-}
-
-.signup-page .form label {
-    display: block;
-    font: 15px Arial, Helvetica, sans-serif;
-    color: dimgrey;
-    margin: 15px auto;
-}
-
-
-.signup-page .form input {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 8px;
-    border-radius: 6px;
-    border: 2px solid #fff;
-    background-color: lightgrey;
-}
-
-.signup-page .button,
-#create-form #button-create-form,
-.create-button {
-    background-color: #387780;
-    color: white;
-    border-radius: 10px;
-    padding: 15px 40px;
-    margin: 15px 10px;
-    text-align: center;
-    float: right;
-}
-
-
-/*create*/
-
-
-#create-form {
-    width: 50%;
-    display: block;
-    padding: 30px;
-    margin: auto;
-    float: left;
-}
-
-#create-form h1,
-#account-form h1 {
-    color: red;
-    font: normal 30px 'Bitter', serif;
-    text-align: center;
-    margin: 45px auto;
-}
-
-#create-form label,
-#account-form label {
-    display: block;
-    font: 15px Arial, Helvetica, sans-serif;
-    color: dimgrey;
-    margin: 15px auto;
-    padding: 10px 30px;
-}
-
-
-#create-form input,
-#account-form input {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 2px solid #fff;
-    background-color: lightgrey;
-}
-
-#create-form textarea {
-    border: 0.3px solid gray;
-    width: 100%;
-    height: 60px;
-}
-
-
-/*account-dashboard-page*/
-
-
-
-.account-dashboard-page .table-base {
-    font: 13px Arial, Helvetica, sans-serif;
-    width: 100%;
-    margin: auto;
-    padding: 30px;
-}
-
-
-.account-dashboard-page th {
-    background-color: #387780;
-    color: white;
-}
-
-.account-dashboard-page td,
-.account-dashboard-page th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-}
-
-.account-dashboard-page tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-
-@media only screen and (max-width:1000px) {
-
-    nav {
-        padding: 10px;
-        font-size: 25px;
-    }
-    nav #regis button {
-        font-size: 15px;
-    }
-    #tag-line {
-        padding: 250px 5px;
-    }
-    .home-page h1 {
-        text-align: center;
-        background-attachment: fixed;
-        background-clip: border-box;
-        background-position: center;
-        background-position: 30% 30%
-    }
-    #tag-line .headline {
-        font-size: 30px;
-    }
-    .home-page #tag-line {
-        top: 25%;
-    }
-    .home-page .middle-home-page {
+    background-color: #E8F1F2;
+    width: 100%; }
+    @media (max-width: 735px) {
+      .home-page #tag-line {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      .home-page #tag-line {
+        flex-direction: column; } }
+    .home-page #tag-line h1 {
+      font: 30px Arial, Helvetica, sans-serif;
+      color: #E8F1F2;
+      padding: 30px;
+      color: #7E6E93; }
+      @media (max-width: 735px) {
+        .home-page #tag-line h1 {
+          padding: 15px; } }
+      @media (max-width: 480px) {
+        .home-page #tag-line h1 {
+          font-size: 25px;
+          padding: 5px; } }
+    .home-page #tag-line button {
+      background-color: #7E6E93;
+      color: #E8F1F2;
+      width: 140px;
+      height: 40px; }
+  .home-page .signup-page {
+    display: none;
+    z-index: 3;
+    position: absolute; }
+    .home-page .signup-page .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #7E6E93;
+      flex-direction: column;
+      padding: 2px;
+      border: 2px solid #7E6E93; }
+      .home-page .signup-page .wrap #close {
+        font-size: 17px;
+        color: #E8F1F2;
+        width: 95%; }
+      .home-page .signup-page .wrap #reg-tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #E8F1F2;
+        text-align: center; }
+        .home-page .signup-page .wrap #reg-tabs span {
+          width: 50%;
+          padding: 10px;
+          cursor: pointer;
+          border: 2px solid #7E6E93;
+          color: #7E6E93;
+          font: 16px Arial, Helvetica, sans-serif; }
+        .home-page .signup-page .wrap #reg-tabs .active {
+          background-color: #7E6E93;
+          color: #E8F1F2; }
+      .home-page .signup-page .wrap form {
+        background-color: #E8F1F2;
+        border: 2px solid #7E6E93;
         padding: 50px;
-    }
-    .home-page .middle-home-page div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        @media (max-width: 735px) {
+          .home-page .signup-page .wrap form {
+            padding: 10px; } }
+        @media (max-width: 480px) {
+          .home-page .signup-page .wrap form {
+            padding: 5px; } }
+        .home-page .signup-page .wrap form label {
+          color: #7D8491;
+          font-size: 18px;
+          text-align: left;
+          padding: 10px;
+          color: #7D8491;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          @media (max-width: 735px) {
+            .home-page .signup-page .wrap form label {
+              padding: 7px;
+              font-size: 16px; } }
+          @media (max-width: 480px) {
+            .home-page .signup-page .wrap form label {
+              padding: 5px;
+              font-size: 14px; } }
+          .home-page .signup-page .wrap form label input {
+            width: 400px;
+            height: 30px; }
+            @media (max-width: 480px) {
+              .home-page .signup-page .wrap form label input {
+                width: 250px; } }
+        .home-page .signup-page .wrap form button {
+          background-color: #7E6E93;
+          color: #E8F1F2;
+          width: 140px;
+          height: 40px; }
+      .home-page .signup-page .wrap #signup-form {
+        display: none; }
+
+.middle-home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #E8F1F2;
+  height: 100vh; }
+  .middle-home-page h2 {
+    font: 30px Arial, Helvetica, sans-serif;
+    color: #E8F1F2;
+    padding: 30px;
+    background-color: #7E6E93;
+    width: 50%;
+    align-self: start;
+    border-top-right-radius: 50px; }
+    @media (max-width: 735px) {
+      .middle-home-page h2 {
+        padding: 15px; } }
+    @media (max-width: 480px) {
+      .middle-home-page h2 {
+        font-size: 25px;
+        padding: 5px; } }
+  .middle-home-page #div-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%; }
+    .middle-home-page #div-img span {
+      color: #7E6E93;
+      font: 16px Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #387780;
+      color: #E8F1F2;
+      width: 100%;
+      height: 100%; }
+      @media (max-width: 480px) {
+        .middle-home-page #div-img span {
+          flex-direction: column; } }
+      .middle-home-page #div-img span img {
+        width: 30%; }
+        @media (min-width: 736px) {
+          .middle-home-page #div-img span img {
+            width: 35%; } }
+        @media (max-width: 735px) {
+          .middle-home-page #div-img span img {
+            width: 40%; } }
+        @media (max-width: 480px) {
+          .middle-home-page #div-img span img {
+            width: 45%; } }
+  .middle-home-page #reasons p {
+    color: #7D8491;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px; }
+    @media (max-width: 735px) {
+      .middle-home-page #reasons p {
+        padding: 7px;
+        font-size: 16px; } }
+    @media (max-width: 480px) {
+      .middle-home-page #reasons p {
+        padding: 5px;
+        font-size: 14px; } }
+  .middle-home-page button {
+    background-color: #7E6E93;
+    color: #E8F1F2;
+    width: 140px;
+    height: 40px;
+    padding-bottom: 10px; }
+
+.account-dashboard-page {
+  background-color: #387780;
+  width: 100%;
+  height: auto; }
+  .account-dashboard-page h1 {
+    font: 30px Arial, Helvetica, sans-serif;
+    color: #E8F1F2;
+    padding: 30px;
+    width: 50%;
+    background-color: #7E6E93;
+    align-self: start;
+    border-top-right-radius: 50px; }
+    @media (max-width: 735px) {
+      .account-dashboard-page h1 {
+        padding: 15px; } }
+    @media (max-width: 480px) {
+      .account-dashboard-page h1 {
+        font-size: 25px;
+        padding: 5px; } }
+  .account-dashboard-page .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    height: 100vh; }
+    @media (max-width: 735px) {
+      .account-dashboard-page .wrapper {
+        padding: 15px; } }
+    @media (max-width: 480px) {
+      .account-dashboard-page .wrapper {
+        padding: 5px; } }
+    .account-dashboard-page .wrapper table {
+      background-color: #E8F1F2;
+      border: 1px solid #7D8491;
+      width: 80%;
+      padding: 50px; }
+      @media (max-width: 735px) {
+        .account-dashboard-page .wrapper table {
+          width: 90%;
+          padding: 30px; } }
+      @media (max-width: 480px) {
+        .account-dashboard-page .wrapper table {
+          width: 95%;
+          padding: 15px; } }
+      .account-dashboard-page .wrapper table tr th {
+        color: #387780;
+        border: 1px solid #272D2D;
         text-align: center;
-        font-size: 12px;
-        padding: 12px;
-        width: 30%;
+        padding: 15px; }
+      .account-dashboard-page .wrapper table tr td {
+        color: #272D2D;
+        border: 1px solid #272D2D;
+        text-align: center;
+        padding: 15px; }
+      .account-dashboard-page .wrapper table tr:nth-child(even) {
+        background-color: #7E6E93; }
+    .account-dashboard-page .wrapper .create-button-div {
+      padding: 50px; }
+      .account-dashboard-page .wrapper .create-button-div a {
+        text-decoration: none; }
+        .account-dashboard-page .wrapper .create-button-div a button {
+          background-color: #7E6E93;
+          color: #E8F1F2;
+          width: 140px;
+          height: 40px; }
 
-    }
-    .home-page .middle-home-page div img {
-        width: 160%;
-    }
-    .home-page #reasons {
+.create-a-link-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #387780; }
+  .create-a-link-page h1 {
+    font: 30px Arial, Helvetica, sans-serif;
+    color: #E8F1F2;
+    padding: 30px;
+    align-self: start;
+    background-color: #7E6E93;
+    width: 50%;
+    border-top-right-radius: 50px; }
+    @media (max-width: 735px) {
+      .create-a-link-page h1 {
+        padding: 15px; } }
+    @media (max-width: 480px) {
+      .create-a-link-page h1 {
+        font-size: 25px;
+        padding: 5px; } }
+  .create-a-link-page .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    padding: 50px; }
+    .create-a-link-page .wrapper form {
+      background-color: #E8F1F2;
+      border: 2px solid #7E6E93;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      @media (max-width: 735px) {
+        .create-a-link-page .wrapper form {
+          padding: 5px; } }
+      @media (max-width: 480px) {
+        .create-a-link-page .wrapper form {
+          padding: 15px; } }
+      .create-a-link-page .wrapper form label {
+        color: #7D8491;
+        font-size: 18px;
+        text-align: left;
         padding: 10px;
-    }
-    .home-page #reasons #why {
-        font-size: 20px;
-        padding: 20px;
-        margin: 2px;
-    }
+        color: #7D8491;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        @media (max-width: 735px) {
+          .create-a-link-page .wrapper form label {
+            padding: 7px;
+            font-size: 16px; } }
+        @media (max-width: 480px) {
+          .create-a-link-page .wrapper form label {
+            padding: 5px;
+            font-size: 14px; } }
+        .create-a-link-page .wrapper form label input {
+          padding: 10px;
+          width: 400px;
+          height: 40px; }
+          @media (max-width: 480px) {
+            .create-a-link-page .wrapper form label input {
+              width: 300px; } }
+      .create-a-link-page .wrapper form button {
+        background-color: #7E6E93;
+        color: #E8F1F2;
+        width: 140px;
+        height: 40px; }
 
+.view-link-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #E8F1F2; }
+  .view-link-page h1 {
+    font: 30px Arial, Helvetica, sans-serif;
+    color: #E8F1F2;
+    padding: 30px;
+    align-self: start;
+    background-color: #7E6E93;
+    width: 50%; }
+    @media (max-width: 735px) {
+      .view-link-page h1 {
+        padding: 15px; } }
+    @media (max-width: 480px) {
+      .view-link-page h1 {
+        font-size: 25px;
+        padding: 5px; } }
+  .view-link-page #view-link {
+    background-color: #387780;
+    width: 50%; }
+  .view-link-page #link-options button {
+    background-color: #7E6E93;
+    color: #E8F1F2;
+    width: 140px;
+    height: 40px; }
+
+footer {
+  margin: auto auto 0 auto;
+  position: relative;
+  width: 100%;
+  background-color: #272D2D; }
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; }
     footer ul li {
-        display: inline-block;
-        margin: auto;
-        width: 30%;
-    }
+      padding: 10px; }
+      footer ul li a {
+        text-decoration: none;
+        color: #E8F1F2; }
+        footer ul li a i {
+          color: #E8F1F2;
+          font-size: 18px; }
 
-    footer ul li a {
-        color: black;
-        text-align: center;
-        font-size: 15px;
-    }
-    .signup-page {
-        padding: 0px;
-    }
-
-    .signup-page .form,
-    .create-a-link-page #create-form {
-        width: 100%;
-        display: block;
-        padding-top: 30px;
-        margin: 25px 0px;
-    }
-
-    .signup-page .form label,
-    .create-a-link-page #create-form label {
-        font-size: 12px;
-        padding: 15px;
-    }
-
-    .signup-page .form input,
-    .create-a-link-page #create-form input {
-        padding: 10px;
-    }
-
-    .signup-page .button,
-    .create-button,
-    #button-create-form {
-        padding: 10px 15px;
-        margin: 5px 25px;
-        float: right;
-    }
-
-    .account-dashboard-page .table-base {
-        font: 13px Arial, Helvetica, sans-serif;
-        color: gray;
-        width: 100%;
-        margin: 15px;
-        padding: 30px;
-    }
-
-    .account-dashboard-page td,
-    .account-dashboard-page th {
-        border: 1px solid #dddddd;
-        text-align: center;
-        padding: 8px;
-        font-size: 15px;
-    }
-
-    .account-dashboard-page tr:nth-child(even) {
-        background-color: #dddddd;
-    }
-
-
-    /*delete*/
-    .delete {
-        font: 33px Arial, Helvetica, sans-serif;
-        color: red;
-        text-align: center;
-        display: block;
-        padding: 110px;
-        margin: 100px;
-    }
-
-    /*logout*/
-    .logout {
-        font-size: 45px;
-        color: red;
-        text-align: center;
-        padding: 100px;
-        margin-top: 200px;
-    }
-}
+/*# sourceMappingURL=styles.css.map */

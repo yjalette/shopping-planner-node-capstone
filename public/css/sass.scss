@@ -165,7 +165,8 @@ nav {
         }
         h1 {
             @include h;
-            color: $purple;
+            color: $black;
+            font-weight: bolder;
         }
         button {
             @include button;

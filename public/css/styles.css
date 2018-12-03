@@ -65,7 +65,8 @@ nav {
       font: 30px Arial, Helvetica, sans-serif;
       color: #E8F1F2;
       padding: 30px;
-      color: #7E6E93; }
+      color: #272D2D;
+      font-weight: bolder; }
       @media (max-width: 735px) {
         .home-page #tag-line h1 {
           padding: 15px; } }
